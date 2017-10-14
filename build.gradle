@@ -1,0 +1,56 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+version = '1.0'
+jar {
+	manifest {
+		attributes 'Implementation-Title': 'Schnitzel.ax',
+				   'Implementation-Version': version
+	}
+}
+
+repositories {
+    mavenCentral()
+}
+
+// The version below dictates which spring-boot-starter version to use in dependencies section
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.7.RELEASE")
+	}
+}
+
+dependencies {
+	// Spring boot
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.springframework.boot:spring-boot-starter-undertow")
+	compile("org.springframework.boot:spring-boot-starter-web")
+	testCompile("org.springframework.boot:spring-boot-starter-test")
+
+	compile("org.apache.commons:commons-lang3:3.6")
+	compile("org.projectlombok:lombok:1.16.18")
+	compile("org.jsoup:jsoup:1.10.3")
+
+	// Webjars
+	//compile("org.webjars:jquery:3.2.1")
+	//compile("org.webjars:bootstrap:4.0.0-beta-1")
+	//compile("org.webjars:font-awesome:4.7.0")
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}

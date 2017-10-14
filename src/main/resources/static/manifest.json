@@ -1,0 +1,47 @@
+{
+  "name": "Dagens schnitzel",
+  "short_name": "schnitzel.ax",
+  "start_url": ".",
+  "background_color": "#fff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "description": "Dagens lunchschnitzel på Åland",
+  "icons": [
+    {
+      "src": "logo_36px.png",
+      "sizes": "36x36",
+      "type": "image/png",
+      "density": 0.75
+    },
+    {
+      "src": "logo_48px.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "density": 1.0
+    },
+    {
+      "src": "logo_72px.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "density": 1.5
+    },
+    {
+      "src": "logo_96px.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "density": 2.0
+    },
+    {
+      "src": "logo_144px.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": 3.0
+    },
+    {
+      "src": "logo_192px.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": 4.0
+    }
+  ]
+}
