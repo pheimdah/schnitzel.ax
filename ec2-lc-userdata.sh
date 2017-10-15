@@ -10,6 +10,5 @@ cd /home/ec2-user/
 sudo -u ec2-user wget https://github.com/pheimdah/schnitzel.ax/archive/master.zip
 sudo -u ec2-user unzip master.zip
 sudo -u ec2-user rm master.zip
-sudo -u ec2-user cd schnitzel.ax-master/
+cd schnitzel.ax-master/
 sudo -u ec2-user sh gradlew bootRun > logs/server.log 2>&1 &
-
