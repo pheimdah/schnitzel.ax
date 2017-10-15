@@ -1,15 +1,33 @@
 #!/bin/bash
 set -ex
+
+# Forward incoming requests on port 80 to local port 8080
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
-rm -f /etc/localtime ; ln -s /usr/share/zoneinfo/Europe/Helsinki /etc/localtime
+
+# Set timezone to Europe/Helsinki
+rm -f /etc/localtime
+ln -s /usr/share/zoneinfo/Europe/Helsinki /etc/localtime
+
+# Install updates and upgrade Java
 yum --assumeyes update
 yum --assumeyes install java-1.8.0-openjdk-devel
 yum --assumeyes remove java-1.7.0-openjdk
 
 cd /home/ec2-user/
-sudo -u ec2-user wget https://github.com/pheimdah/schnitzel.ax/archive/master.zip
-sudo -u ec2-user unzip master.zip
-sudo -u ec2-user rm master.zip
+
+# Set up Gradle
+mkdir .gradle/
+echo "org.gradle.daemon=false" > .gradle/gradle.properties
+
+# Install schnitzel.ax web app
+wget https://github.com/pheimdah/schnitzel.ax/archive/master.zip
+unzip master.zip
+rm master.zip
+mkdir schnitzel.ax-master/logs/
+
+# Restore permissions, make sure everything is owned by ec2-user
+chown -R ec2-user:ec2-user /home/ec2-user/
+
+# Start schnitzel.ax web app
 cd schnitzel.ax-master/
-sudo -u ec2-user mkdir logs/
-sudo -u ec2-user sh gradlew bootRun > logs/server.log 2>&1 &
+sudo -u ec2-user bash -c "sh gradlew bootRun > logs/server.log 2>&1 &"
