@@ -1,6 +1,6 @@
 {
-  "name": "schnitzel.ax",
-  "short_name": "Dagens Schnitzel",
+  "name": "Dagens lunchschnitzel på Åland",
+  "short_name": "Schnitzel",
   "start_url": ".",
   "background_color": "#fff",
   "display": "standalone",
