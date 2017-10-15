@@ -7,6 +7,8 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -16,6 +18,9 @@ import ax.schnitzel.infrastructure.LunchguidenRepository;
 
 @Service
 public class SchnitzelService {
+
+	/** Logging utility */
+	private final static Logger LOG = LoggerFactory.getLogger(SchnitzelService.class);
 
 	@Autowired
 	private LunchguidenRepository lunchguiden;
@@ -28,7 +33,7 @@ public class SchnitzelService {
 
 	}
 
-	// @PostConstruct
+	@PostConstruct
 	@Scheduled(cron = "0 0 0,9 * * MON-FRI")
 	public void updateRestaurants() {
 		try {
@@ -40,8 +45,7 @@ public class SchnitzelService {
 			}
 		}
 		catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 		}
 	}
 

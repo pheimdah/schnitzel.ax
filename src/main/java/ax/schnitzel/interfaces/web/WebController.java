@@ -26,9 +26,4 @@ public class WebController {
 		return new ModelAndView("home");
 	}
 
-	@RequestMapping("/updateRestaurants")
-	public void updateRestaurants() {
-		schnitzelService.updateRestaurants();
-	}
-	
 }

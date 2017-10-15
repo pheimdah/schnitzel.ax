@@ -8,7 +8,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -31,7 +30,7 @@ public class LunchguidenRepository {
 		final Document lunchguiden = Jsoup.connect(url).timeout(timeout).userAgent(userAgent).get();
 		LOG.info("Downloading " + url);
 
-		// TODO: Convert to Java 8 Lambdas
+		// TODO: Convert to Java 8 Lambdas?
 		for (Element restaurantElement : lunchguiden.getElementById("restaurants").getElementsByClass("restaurant")) {
 			String id = restaurantElement.id();
 
