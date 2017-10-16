@@ -42,15 +42,15 @@ public class LunchguidenRepository {
 				restaurant.setId(id);
 				restaurant.setName(restaurantElement.getElementsByClass("header_left").get(0).text());
 
-				List<String> highlightedDishes = new ArrayList<String>(0);
-				
+				List<String> dishes = new ArrayList<String>(0);
+
 				for (Element menuItem : menuElement.getElementsByTag("li")) {
-					if (StringUtils.containsIgnoreCase(menuItem.toString(), "pasta")) {
-						highlightedDishes.add(menuItem.text());
+					if (StringUtils.containsIgnoreCase(menuItem.toString(), "schnitzel")) {
+						dishes.add(menuItem.text());
 					}
 				}
-				
-				restaurant.setSchnitzelDishes(highlightedDishes);
+
+				restaurant.setDishes(dishes);
 				restaurants.add(restaurant);
 				LOG.info("Found " + restaurant.toString());
 			}

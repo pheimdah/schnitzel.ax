@@ -70,7 +70,7 @@
 						<th:block th:each="restaurant : ${restaurants}">
 							<dt><a data-toggle="collapse" th:attr="href='#'+${restaurant.id}+'_menu'" th:text="${restaurant.name}" class="text-secondary"></a></dt>
 							<div class="collapse" th:id="${restaurant.id}+'_menu'" style="padding-left: 10px">
-								<dd class="text-muted font-italic" th:each="dish : ${restaurant.schnitzelDishes}" th:text="${dish}" />
+								<dd class="text-muted font-italic" th:each="dish : ${restaurant.dishes}" th:text="${dish}" />
 							</div>
 						</th:block>
 					</dl>
