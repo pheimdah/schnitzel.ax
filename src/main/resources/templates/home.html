@@ -1,90 +1,117 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-title" content="Dagens schnitzel" />
-		<meta name="application-name" content="Dagens schnitzel" />
-		<meta name="description" content="" />
-		<link rel="manifest" href="manifest.json" />
-		<link rel="icon" href="/logo_16x16.png" /> 
-		<title>schnitzel.ax</title>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
-		<style>
-			html, body {
-			text-align: center;
-			font-size: 18px;
-			height: 100%;
-			}
-			#wrap {
-			min-height: 100%;
-			height: auto !important;
-			height: 100%;
-			margin: 15px auto -85px;
-			}
-			#push, #footer {
-			height: 75px;
-			}
-			#footer {
-			background-color: #f5f5f5;
-			font-size: 14px;
-			padding-top: 5px;
-			}
-		</style>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-title" content="Dagens lunchschnitzel på Åland" />
+	<meta name="application-name" content="Dagens lunchschnitzel på Åland" />
+	<meta name="description" content="Schnitzel server idag på …" />
+
+	<!-- Facebook Open Graph metadata -->
+	<meta property="og:url" content="https://schnitzel.ax/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Dagens lunchschnitzel på Åland" />
+	<meta property="og:description" content="Schnitzel server idag på …" />
+	<meta property="og:image" content="https://schnitzel.ax/logo_192x192.png" />
+	<meta property="og:image:secure_url" content="https://schnitzel.ax/logo_192x192.png" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="192" />
+	<meta property="og:image:height" content="192" />
+
+	<link rel="manifest" href="manifest.json" />
+	<link rel="icon" href="/logo_16x16.png" /> 
+	<title>Dagens lunchschnitzel på Åland</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+	<style>
+	html {
+	text-align: center;
+	position: relative;
+	min-height: 100%;
+	}
+	body {
+	margin-bottom: 180px;
+	}
+	.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 180px;
+	line-height: 22px;
+	background-color: #fff;
+	font-size: 14px;
+	}
+	.container {
+	width: auto;
+	max-width: 680px;
+	padding: 0 15px;
+	}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer="defer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous" defer="defer" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous" defer="defer" />
+
+	</head>
+
+	<body>
+
+		<!-- Facebook page widget -->
 		<div id="fb-root"></div>
 		<script>
-		(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/sv_SE/all.js#xfbml=1&amp;version=v2.10";
-		fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
+			//<![CDATA[
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v2.10";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			//]]>
 		</script>
-		<script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-108148563-1"></script>
+
+		<!-- Google AdSense -->
+		<script src="https://www.googletagmanager.com/gtag/js?id=UA-108148563-1" async="async" />
 		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		  gtag('config', 'UA-108148563-1');
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-108148563-1');
 		</script>
-	</head>
-	<body>
-		<div id="wrap">
-			<div class="container">
-				<p class="lead">Schnitzel serveras idag på &hellip;</p>
-				<hr />
-				<th:block th:if="${restaurants.empty}">
-					<div class="alert alert-info" role="alert" style="display:inline-block;" th:if="${lastUpdated != null}">Ingen schnitzel idag &#3232;&lowbar;&#3232;</div>
-					<div class="alert alert-danger" role="alert" style="display:inline-block;" th:if="${lastUpdated == null}">Ett fel har uppstått &#9785;</div>
-					<div>Se hela lunchmenyn på <a href="http://www.aland.com/se/mat_och_nojen/lunchguiden">aland.com</a><br/></div>
-				</th:block>
-				<th:block th:unless="${restaurants.empty}">
-					<dl>
-						<th:block th:each="restaurant : ${restaurants}">
-							<dt><a data-toggle="collapse" th:attr="href='#'+${restaurant.id}+'_menu'" th:text="${restaurant.name}" class="text-secondary"></a></dt>
-							<div class="collapse" th:id="${restaurant.id}+'_menu'" style="padding-left: 10px">
-								<dd class="text-muted font-italic" th:each="dish : ${restaurant.dishes}" th:text="${dish}" />
-							</div>
-						</th:block>
-					</dl>
-				</th:block>
-			</div>
-			<div id="push"></div>
+
+		<div class="container" style="font-size: 18px;">
+			<p class="lead" style="padding-top: 10px">Schnitzel serveras idag på &hellip;</p>
+			<hr />
+			<th:block th:if="${restaurants.empty}">
+				<div class="alert alert-info" role="alert" style="display:inline-block;" th:if="${lastUpdated != null}">Ingen schnitzel idag &#3232;&lowbar;&#3232;</div>
+				<div class="alert alert-danger" role="alert" style="display:inline-block;" th:if="${lastUpdated == null}">Ett fel har uppstått &#9785;</div>
+				<div>Se hela lunchmenyn på <a href="http://www.aland.com/se/mat_och_nojen/lunchguiden">aland.com</a><br/></div>
+			</th:block>
+			<th:block th:unless="${restaurants.empty}">
+				<dl>
+					<th:block th:each="restaurant : ${restaurants}">
+						<dt><a data-toggle="collapse" th:attr="href='#'+${restaurant.id}+'_menu'" th:text="${restaurant.name}" class="text-secondary"></a></dt>
+						<div class="collapse" th:id="${restaurant.id}+'_menu'" style="padding-left: 10px">
+							<dd class="text-muted font-italic" th:each="dish : ${restaurant.dishes}" th:text="${dish}" />
+						</div>
+					</th:block>
+				</dl>
+			</th:block>
 		</div>
-		<footer id="footer">
+
+		<footer class="footer">
 			<div class="container">
-				<div class="fb-like" data-href="https://schnitzel.ax" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
-				<br />
-				<span class="text-muted">Data från <a href="http://www.aland.com/" target="_blank">aland.com</a><span th:if="${lastUpdated}" class="text-muted" th:text="'&nbsp;&ndash;&nbsp;uppdaterad '+${#dates.format(lastUpdated, 'dd MMM HH:mm')}"></span></span>
-				<br />
-				<span class="text-muted"><a href="https://github.com/pheimdah/schnitzel.ax" target="_blank">GitHub</a></span>
+			<hr/>
+			<span class="text-muted">Data inhämtad från <a href="http://www.aland.com/" target="_blank">aland.com</a></span>
+			<br />
+			<span th:if="${lastUpdated}" class="text-muted" th:text="'Uppdaterad '+${#dates.format(lastUpdated, 'dd MMM HH:mm')}"></span>
+			<br />
+			<span class="text-muted">Se programkällkod på <a href="https://github.com/pheimdah/schnitzel.ax" target="_blank">GitHub</a></span>
+			<br/>
+			<div class="fb-page" data-href="https://www.facebook.com/schnitzel.ax/" data-width="360" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/schnitzel.ax/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/schnitzel.ax/">Dagens lunchschnitzel på Åland</a></blockquote></div>
 			</div>
 		</footer>
 	</body>
