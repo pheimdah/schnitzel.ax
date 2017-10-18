@@ -34,7 +34,7 @@ public class SchnitzelService {
 	}
 
 	@PostConstruct
-	@Scheduled(cron = "0 0 0,9 * * MON-FRI")
+	@Scheduled(cron = "0 0 0,9,10,11,12,13 * * MON-FRI")
 	public void updateRestaurants() {
 		try {
 			List<Restaurant> newlist = lunchguiden.get();
