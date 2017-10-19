@@ -41,8 +41,6 @@ public class LunchguidenRepository {
 	}
 
 	/**
-	 * Note: Only publicly scoped because of simplifying unit testing
-	 * 
 	 * @param lunchguiden a Lunchguiden jsoup Document
 	 * @return list of restaurants and their schnitzel dishes of the day
 	 */
