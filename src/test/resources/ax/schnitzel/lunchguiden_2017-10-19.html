@@ -1,0 +1,1365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv-SE" lang="sv-SE"> 
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /> 
+		<title>Lunchguiden - aland.com</title>
+		<meta name="Author" content="Strax Kommunikation" />
+		<meta name="Generator" content="Lemon 2.9.2" />
+		<meta name="Keywords" content="Åland, Mariehamn, lunch, mat, lunchservering, restaurang, café, måltid, lunchguiden, husmanskost, Alandica Café & Bistro, Bistro Savoy, Brittas restaurang, Cafe la Strada, Dinos Bar & Grill, Godby Hotell, Indigo Restaurang & Bar, Nikolaj Café & Brass" />
+		<meta name="Description" content="I aland.com's lunchguide hittar du restauranger och caféer som serverar lunchrätter och lättare måltider på Åland." />
+				
+		<link rel="shortcut icon" href="http://www.aland.com/img/favicon.ico" />
+		<link rel="apple-touch-icon" href="http://www.aland.com/img/shortcuticon.png">
+		<link rel="stylesheet" type="text/css" href="http://www.aland.com/assets/gzip.con?date=1288359952&type=css&files=css/reset.css,css/960.css,css/styles.css,css/page.css,css/jquery-ui/default/jquery-ui-1.7.2.default.css,js/jquery-fancybox/jquery.fancybox.css,css/modules.css,css/anythingslider.css" />
+		<script type="text/javascript" src="http://www.aland.com/assets/gzip.con?type=js&files=js/jquery-1.7.2.min.js,js/jquery.anythingslider.min.js"></script>
+		<!--
+		<link rel="stylesheet" media="screen" type="text/css" href="http://www.aland.com/css/gzip_css.con?files=css/reset.css,css/960.css" />
+		<link rel="stylesheet" media="screen" type="text/css" href="http://www.aland.com/css/gzip_css.con?files=css/styles.css" />
+		<link rel="stylesheet" media="screen" type="text/css" href="http://www.aland.com/css/jquery-ui/default/jquery-ui-1.7.2.default.css" />
+		-->
+		
+				<link rel="stylesheet" type="text/css" href="http://www.aland.com/css/jquery-ui/lunch-scope/jquery-ui-1.7.2.lunch.css" />
+		
+		<script type="text/javascript" src="http://www.aland.com/js/gzip_js.con?files=js/swfobject.js"></script>
+		<script type="text/javascript">
+			
+			// Language select
+			function changePage(newLoc){
+				nextPage = newLoc.options[newLoc.selectedIndex].value
+				if (nextPage != ""){
+					document.location.href = nextPage
+				}
+			}
+		</script>
+
+		<!--[if IE 6]>
+		<script type="text/javascript" src="http://www.aland.com/js/DD_belatedPNG_0.0.8a-min.js"></script>
+		<script type="text/javascript">
+			DD_belatedPNG.fix('.ie6-png, #wrapper');
+			// This is not a pretty solution, but thats not IE6 either so who cares?..
+			// Problem: The transparent pngs get stuck on hover in IE6..
+			DD_belatedPNG.fix('#navigation img, #navigation li.hover, #navigation li.active');
+		</script>
+		<![endif]--> 
+		
+		<script type="text/javascript">
+
+function mouseDown(e)
+{
+	var altPressed=0;
+	var evt = navigator.appName=="Netscape" ? e:event;
+	altPressed = evt.altKey;
+	if (altPressed){
+		window.open('http://www.aland.com/lemon/static/browser_not_supported.con', 'not_supported', 'top=300px,left=350px,width=600px,height=300px,scrollbars=no,resizable=yes,toolbar=no,location=no,directories=no,status=yes,menubar=no');
+	}
+}
+
+if (parseInt(navigator.appVersion)>3) {
+	document.onmousedown = mouseDown;
+}
+
+function fnEdit(e)
+{
+	// Dummy function to support older versions of Lemon
+}
+
+</script>		<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAA68xbx7fAAdfhDzsBJsvrXRSj1cBTEBF6yIoSTIqheHgMN_ok0BSQmIAo8pSTqS3_7EuFB8dRlgSvdg"></script>
+		<!--<script type="text/javascript" src="http://www.aland.com/js/gzip_js.con?files=js/jquery-1.6.2.min.js"></script>-->
+				<script type="text/javascript">
+						// Load jQuery
+			google.setOnLoadCallback(function() {
+				$(function (){
+					
+					/*$.getScript("http://www.aland.com/js/gzip_js.con?files=js/swfobject.js", function() {
+						setTimeout(function() {
+							var flashvars = { what_time: "1508437378" };
+							var params = { wmode: "transparent" };
+							var attributes = { wmode: "transparent" };
+							swfobject.embedSWF("http://www.aland.com/img/time.swf", "timenow", "70", "20", "9.0.0", null, flashvars, params, attributes);
+						}, 1000);
+					});*/
+										
+					$.getScript("http://www.aland.com/js/gzip_js.con?files=js/jquery-ui-1.7.2.custom.min.js", function() {
+
+										$(".hidden_class").parent().find('.firstLine').prepend("<span class=\"togglePhonebook\">[<span><img src=\"http://www.aland.com/img/arrow_down.gif\" alt=\"Visa hela telefonkataloginlägget\" title=\"Visa hela telefonkataloginlägget\"></span>]</span>");
+					$(".togglePhonebook span").toggle(function() {
+						$(this).html("<img src=\"http://www.aland.com/img/arrow_up.gif\" alt=\"Dölj telefonkataloginlägget\" title=\"Dölj telefonkataloginlägget\">").parent().parent().parent().find(".hidden_class").slideDown('fast');
+					},function() {
+						$(this).html("<img src=\"http://www.aland.com/img/arrow_down.gif\" alt=\"Visa hela telefonkataloginlägget\" title=\"Visa hela telefonkataloginlägget\">").parent().parent().parent().find(".hidden_class").slideUp('fast');
+					});
+					$(".phonebook p:odd").addClass("phonebook_odd");
+
+					$('#navigation li').hover(function() {
+						$(this).addClass("hover");
+					}, function() {
+						$(this).removeClass("hover");
+					});
+
+					$('.externallink a').filter(function() {
+						return this.hostname && this.hostname !== location.hostname;
+					}).after(' <img src="http://www.aland.com/img/link.gif" />');
+
+					$.getScript("http://www.aland.com/js/gzip_js.con?files=js/common.js,js/menu.js,js/jquery-scrollto.js");
+					$.getScript("http://www.aland.com/js/common.js.php");
+
+
+						
+													$.getScript("http://www.aland.com/js/gzip_js.con?files=js/jquery-ui.datepicker-se.js", function() {
+								$.datepicker.setDefaults($.datepicker.regional['se']);
+						});
+						
+						var myDate=new Date();
+						myDate.setFullYear(2017,9,19);
+
+						$("#eventCalPicker").datepicker(
+							{	showOn: 'button', 
+								buttonImage: 'http://www.aland.com/img/header/cal_datepicker.png', 
+								buttonImageOnly: true,
+								dateFormat: 'yy/mm/dd',
+								defaultDate: myDate,
+								gotoCurrent: true,
+								onSelect: function(dateText, inst) { 
+									$("#eventCalPicker").datepicker( 'hide', 1 );
+									window.location = 'http://www.aland.com/se/evenemang/'+dateText
+
+								}
+							}
+						);
+
+						$("#timetable_datepicker").datepicker(
+							{	
+																	regional: 'se',
+																onSelect: function(dateText, inst) {
+									$("#timetable_date").val(dateText);
+									$(".port").change();
+								}
+							}
+						);
+
+											});
+
+					// Trigger the search assets panel
+					$("#searchfld").focus(function() {
+						$("#search_assets").slideDown();
+					});
+					$("body").click(function(event) {
+						var $target = $(event.target);
+						if ($target.parents("#search_form").size()==0 && $target.attr("id")!="search_form" && $("#search_assets").is(":visible"))
+							$("#search_assets").slideUp();
+					});
+					$("#close_assets").click(function() {
+						$("#search_assets").slideUp();
+					});
+
+					$(".searchbox").change(function() {
+						if ($(this).attr("id")=="searchbox_all") {
+							$(".searchbox").attr("checked", "");
+							$(this).attr("checked", "checked");
+						} else
+							$("#searchbox_all").attr("checked", "");
+
+					});
+
+					$("#search_form")
+						.submit(function () {
+							search_term = $("#searchfld").val();
+							var mode=0;
+							if ($("#searchbox_all:checked").val()=="1")	 {
+								mode=7;
+							}
+							else {
+								if ($("#searchbox_phonebook:checked").val()=="1")
+									mode = mode + 1;
+								if ($("#searchbox_event:checked").val()=="1")
+									mode = mode + 2;
+								if ($("#searchbox_article:checked").val()=="1")
+									mode = mode + 4;
+								if (mode==0)
+									mode = 7;
+							}
+
+							if (search_term=="") {
+								alert ("skriv in ett sökord!");
+								return false;
+							} else {
+								redirectLink = 'http://www.aland.com/se/sok/'+urlencode(search_term)+"/"+mode;
+								window.location = redirectLink;
+								return false;
+							}
+						})
+						.hover(
+							function () {
+								if ($("#searchfld").val()=="") {
+									$("#search_field").css("background-image","url('http://www.aland.com/img/header/header_search_bg_over.png')");
+//									alert ("byt ut default-bakgrundsbilden, fältet är tomt!");
+								}
+							},
+							function () {
+								if ($("#searchfld").val()=="") {
+									$("#search_field").css("background-image","url('http://www.aland.com/img/header/header_search_bg.png')");
+//									alert ("byt tillbaka till default-bakgrundsbilden, fältet är fortfarande tomt!");
+								}
+							}
+						);
+
+						/*
+						$("#languages").change( function() {
+							alert($(this).val());
+						});
+						*/
+
+						$("#mod_kino #speaker").hover(
+							function(){
+						    	$('body').append('<embed src="http://www.aland.com/assets/kino_cache/drumloop.mp3" autostart="true" hidden="true" loop="true">');
+								$('#mod_kino .feed .row .date').addClass("untz");
+							},
+							function(){
+								$('embed').remove();	
+								$('#mod_kino .feed .row .date').removeClass("untz");
+							}
+						);
+
+
+
+							$.getScript("http://www.aland.com/js/jquery-ui-1.7.2.custom.min.js", function() {
+
+		$("#restaurants").sortable({
+			handle: ".ui-accordion-header",
+			stop: function(i) {
+				restListValues = $("#restaurants").sortable("serialize");
+				$.post("http://www.aland.com/assets/ajax_helper.con", { type: "reorder_lunch", restList: restListValues },
+					function(data){
+						//alert("Data Loaded: " + data);
+					});
+			}
+		});
+		
+		//hover states on the static widgets
+		$('.ui-accordion-header, .lunch_day_btn').hover(
+			function() { $(this).addClass('ui-state-hover'); }, 
+			function() { $(this).removeClass('ui-state-hover'); }
+		);
+
+		//$(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
+		//$(".portlet").addClass("ui-widget ")
+//			.find(".portlet-header")
+//				.addClass("ui-widget-header ui-corner-all")
+//				.addClass("ui-widget-header")
+//				.prepend('<span class="ui-icon ui-icon-minusthick"></span>')
+//				.end()
+//			.find(".portlet-content");
+
+		$("#restaurants").disableSelection();
+
+	});				});
+			});
+					</script>
+
+		
+	</head>
+
+	
+	<body >
+		
+		<div id="framework_wrapper" class="clearfix">
+			<div id="design_wrapper">
+				<div id="header">
+					<div class="container_12">
+						<div id="upper_header">
+							<div id="upper_header_left">
+								<div id="logo">
+									<a href="http://www.aland.com/se"><img src="http://www.aland.com/img/header/alandcom_logotype.jpg" alt="Aland.com" /></a>								</div> <!--/logo-->
+								<div id="assets_right">
+									<form method="post"><select id="languages" name="selectedPage" onChange="changePage(this.form.selectedPage)"><option value="">&laquo; Language &raquo;</option><option value="http://www.aland.com/se">Svenska</option><option value="http://www.aland.com/fi">Suomeksi</option><option value="http://www.aland.com/en">English</option></select></form>								</div>
+							</div>
+							<div id="upper_header_right">
+								<div id="altnav">
+									<div id="altnav_bar" class="clearfix">
+										<a href="http://www.aland.com/sok_i_telefonkatalogen">Telefonkatalog</a><a href="http://www.aland.com/bransch">Branscher</a><a href="http://www.aland.com/se/mat_och_nojen/lunchguiden">Lunchguiden</a><a href="http://www.aland.com/media">Media</a><a href="http://www.aland.com/aland_i_varlden">Åland i världen</a><a href="http://www.aland.com/bilwebben">Bilwebben</a><a href="http://www.aland.com/aland_classics">Klassisk</a><a href="http://www.aland.com/ekonomi"><span style='color: green'>Ekonomi</span></a><a href="http://www.aland.com/se/vader">Väder</a>									</div>
+								</div>
+								<div id="header_search">
+									<form action="http://www.aland.com/search.con" method="post" name="search_form" id="search_form">
+										<input type="hidden" name="search_phonebook" value="true" />
+										<input type="hidden" name="search_articles" value="true" />
+										<input type="hidden" name="search_events" value="true" />
+	
+										<div id="search_field">
+											<input type="text" name="searchfld" id="searchfld" value="" />
+										</div>
+										<div id="search_button">
+											<a href="#" onclick="$('#search_form').submit();">Sök</a>
+										</div>
+	
+										<div id="search_assets">
+											<div class="options heading">Sökalternativ</div>
+											<div class="options">
+												<label for="searchbox_all">Hela aland.com</label>
+												<input type="checkbox" class="searchbox" id="searchbox_all" checked="checked" value="1" />
+	
+												<label for="searchbox_event">Evenemang</label>
+												<input type="checkbox" class="searchbox" id="searchbox_event" value="1" />
+											</div>
+											<div class="options">
+												<label for="searchbox_phonebook">Telefonkatalogen</label>
+												<input type="checkbox" class="searchbox" id="searchbox_phonebook" value="1"/>
+	
+												<label for="searchbox_article">Artiklar</label>
+												<input type="checkbox" class="searchbox" id="searchbox_article" value="1" />
+											</div>
+											<a id="close_assets" title="Stäng sökalternativ" href="javascript:void(0);"><img src="http://www.aland.com/img/header/close_assets.png" alt="Stäng sökalternativ" /></a>
+										</div> <!--/#search_assets-->
+									</form>
+								</div> <!--/header_search-->
+								<div id="calendar_upcoming">
+									<a class="cal_item active" href="http://www.aland.com/se/evenemang/2017/10/19"><span class="date">19</span><span class="day">tor</span></a><a class="cal_item" href="http://www.aland.com/se/evenemang/2017/10/20"><span class="date">20</span><span class="day">fre</span></a><a class="cal_item" href="http://www.aland.com/se/evenemang/2017/10/21"><span class="date">21</span><span class="day">lör</span></a><a class="cal_item" href="http://www.aland.com/se/evenemang/2017/10/22"><span class="date">22</span><span class="day">sön</span></a><a class="cal_item" href="http://www.aland.com/se/evenemang/2017/10/23"><span class="date">23</span><span class="day">mån</span></a><a class="cal_item" href="http://www.aland.com/se/evenemang/2017/10/19"><input type="hidden" id="eventCalPicker" /></a><div id="cal_today"><a href="http://www.aland.com/se/evenemang/2017/10">Oktober 2017</a> | <a style="float: none; display: inline" href="http://www.aland.com/se/evenemang/2017/10/19"><b>Idag</b></a></div>								</div> <!--/calendar_upcoming-->
+							</div>
+						</div> <!--/upper_header-->
+
+						<ul id="navigation">
+							<li id="itemId0">
+								<a href="http://www.aland.com/"><img src="http://www.aland.com/img/header/hometag.png" alt="Hem" /></a>
+							</li>
+							<li id="itemId1"><a  href="http://www.aland.com/se/evenemang_pa_aland">Evenemang</a><span><a  href="http://www.aland.com/se/se_och_gora/evenemang_pa_aland">Just nu på Åland</a></span></li><li id="itemId2" class="active"><a  href="http://www.aland.com/se/mat_och_nojen">Mat & nöjen</a><span><a  href="http://www.aland.com/se/mat_och_nojen/lunchguiden">Lunchguiden</a></span><span class='dot'>,</span><span><a  href="http://www.aland.com/se/mat_och_nojen/restauranger">Äta ute</a></span></li><li id="itemId3"><a  href="http://www.aland.com/se/shopping_pa_aland">Shopping</a><span><a  href="http://www.aland.com/se/shopping_pa_aland/shopping_i_mariehamn">Butiker i Mariehamn</a></span><span class='dot'>,</span><span><a  href="http://www.aland.com/se/shopping_pa_aland/konsthantverk_och_formgivning">Konsthantverk</a></span></li><li id="itemId4"><a  href="http://www.aland.com/se/se_och_gora">Se & göra</a><span><a  href="http://www.aland.com/se/se_och_gora/sevardheter">Sevärt</a></span><span class='dot'>,</span><span><a  href="http://www.aland.com/se/se_och_gora/aktiviteter">Fritid & aktiviteter</a></span></li><li id="itemId5"><a  href="http://www.aland.com/se/resa_och_bo">Resa & bo</a><span><a  href="http://www.aland.com/se/resa_och_bo/bat_till_aland">Res till Åland med båt</a></span><span class='dot'>,</span><span><a  href="http://www.aland.com/se/resa_och_bo/hotell">Bo på hotell</a></span><span class='dot'>,</span><span><a  href="http://www.aland.com/se/resa_och_bo/stugor_och_stugbyar">Bo i stuga</a></span></li><li id="itemId6"><a  href="http://www.aland.com/se/moten">Möten</a><span><a  href="http://www.aland.com/se/moten/motesarrangorer">Konferensarrangörer</a></span></li>						</ul>
+
+					</div> <!--/.container_12-->
+				</div> <!--/#header-->
+
+				<div id="wrapper" class="container_12 clearfix">
+
+					<div class="grid_12" id="today">
+						<div class="grid_3 alpha">
+							<div id="day_and_names">
+								Torsdag 19 oktober.<br /><b>Viking</b>.							</div>
+						</div>
+						<div class="grid_7">
+							<div id="weathersponsor">
+								<a href="http://www.vikingline.ax/" target="_blank">
+									
+									<div id="weather_box" class="clearfix"><div style="float:left; width:167px; height:40px; padding:10px 0; color:#ed1c24;"><h3><b><span style="font-size: 13.5pt; font-family: 'Times New Roman',serif; color: red">Få bonus på dina inköp!
+</span></b></h3></div><img style="float:right;" src="http://www.aland.com/img/viking_line_weather_textbox.png" alt="Viking Line" /></div>								</a>
+							</div>
+														<div id="mod_yr"><div id="data"><ul><li><b><a href="http://www.aland.com/vader">Mariehamn</a></b></li><li><a href="http://www.aland.com/vader">5&deg; C<img alt="Sjunker till 4 &deg; C" title="Sjunker till 4 &deg; C" class="temperaturePrediction" src="http://www.aland.com/modules/yr_weather_symbols/temp_down.png"/> <span title="Nederbörd">0&nbsp;mm</span></a></li><li><a href="http://www.aland.com/vader"><span class="Vindriktning">NNV</span> 1.0 m/s</a></li></ul></div><a href="http://www.aland.com/vader"><img id="symbol" src="http://www.aland.com/assets/scale_image.con?image=http://www.aland.com/modules/yr_weather_symbols/2.png&width=50&height=50" alt="symbol"/></a></div><!--#mod_yr-->						</div>
+						<div class="grid_2 omega">
+							<div id="today_banner">
+								<a href="http://www.turistkonferens.com/" target="_blank"><img src="http://www.aland.com/img/atk_logo.png" alt="Ålands Turist och Konferens" /></a>
+							</div>
+						</div>
+					</div> <!--/#today-->
+
+					<div class="grid_12">
+						<script type='text/javascript'>
+						<!--//<![CDATA[
+							//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+							var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+							var m3_r = Math.floor(Math.random()*99999999999);
+							if (!document.MAX_used) document.MAX_used = ',';
+							document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+							document.write ("?zoneid=36&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+							document.write ('&amp;cb=' + m3_r);
+							if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+							document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+							document.write ("&amp;loc=" + escape(window.location));
+							if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+							if (document.context) document.write ("&context=" + escape(document.context));
+							if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+							document.write ("'><\/scr"+"ipt>");
+						//]]>-->
+						</script>
+						<noscript>
+							<a href='https://ads.aland.com/revive/www/delivery/ck.php?n=69809674&amp;cb=1508437378' target='_blank'><img src='https://ads.aland.com/revive/www/delivery/avw.php?zoneid=&amp;source=&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;cb=1508437378&amp;n=95333309' border='0' alt='' /></a>
+						</noscript>
+					</div>
+<div id="breadcrumbs" class="grid_12">
+<a href="http://www.aland.com/se">Hem</a> <span class="raquo">&raquo;</span> <a href="http://www.aland.com/se/mat_och_nojen">Mat & Nöjen</a> <span class="raquo">&raquo;</span> <a href="http://www.aland.com/se/mat_och_nojen/lunchguiden">Lunchguiden</a> </div> <!-- end .grid_12 -->
+<div class="clear"></div>
+					<!-- INDENT -->
+
+					<div id="secondary_nav" class="grid_12">
+<ul id="horizontal_nav" class="clearfix"><li class="active"><span class="nav_left"></span>
+<span class="nav_mid"><a href="http://www.aland.com/se/mat_och_nojen/lunchguiden">Lunchguiden</a></span>
+<span class="nav_right"></span>
+</li>
+<li><span class="nav_left"></span>
+<span class="nav_mid"><a href="http://www.aland.com/se/mat_och_nojen/restauranger">Restauranger</a></span>
+<span class="nav_right"></span>
+</li>
+<li><span class="nav_left"></span>
+<span class="nav_mid"><a href="http://www.aland.com/se/mat_och_nojen/cafeer">Caféer</a></span>
+<span class="nav_right"></span>
+</li>
+</ul></div> <!--/#secondary_nav-->
+
+
+					<div ></div>					<div class="grid_8 lunch-scope">
+					
+						<div class="grid_4">
+							<img src="http://www.aland.com/img/lunchguiden_large_logo.gif" alt="Lunchguiden" title="Lunchguiden" />
+						</div> <!--/.grid_4-->
+						
+						<div id="lunch_days" class="grid_4">
+						<p>&nbsp;</p>
+							<h2><b>Vecka 42</b></h2><a class="ui-state-default ui-corner-all ui-state-active lunch_day_btn" href="#">Tor</a><a class="ui-state-default ui-corner-all lunch_day_btn" href="http://www.aland.com/lunch/2017/10/20">Fre</a><a class="ui-state-default ui-corner-all lunch_day_btn" href="http://www.aland.com/lunch/2017/10/23">Mån</a><a class="ui-state-default ui-corner-all lunch_day_btn" href="http://www.aland.com/lunch/2017/10/24">Tis</a><a class="ui-state-default ui-corner-all lunch_day_btn" href="http://www.aland.com/lunch/2017/10/25">Ons</a>						</div> <!--/#lunch_days-->
+						<div class="clear"></div>
+						<div ><p>
+<br />
+<b>Tips!</b> Du kan själv anpassa lunchguidens utseende så att dina favoritrestauranger alltid ligger överst.
+Så här gör du: för muspekaren över restaurangens namn, håll sedan in vänster musknapp och dra restaurangen upp eller ner i listan.
+<br />
+<br />
+</p></div>						<div id="restaurants">
+
+							<!--Passive! 60 North Bar & Cafe - 0--><div id="restaurant_62" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">60 North Bar & Cafe</div><div class="header_right">Flygfältsvägen 67, 22120 Mariehamn, tel. 358447262000</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="www.60north.fi" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/62.png?ts=1486380764"><p>Öppettider: <br />
+Må-Fre: 8.30-21.00<br />
+Lördagar: Stängt<br />
+Söndagar: 16-21.00<br />
+På söndagar erbjuder vi även förutom bistromenyn After Noon Tea. Boka gärna bord på förhand. <br />
+<br />
+Lunchen serveras vardagar mellan 11-14.<br />
+Efter kl 14 serveras från vår bistromeny.<br />
+<br />
+Personalen är glada att hjälpa till med specialdieter.<br />
+Många av rätterna går att ordna ex glutenfria. <br />
+Önskar man en liten sallad till lunchen så ordnar vi på begäran till er. <br />
+<br />
+Välkomna ut till flygfältet!</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Kassler med äppelchutney & klyftpotatis <span></span> (G, L) - 11.00&euro;</li><li>Sallad med kycklingröra, pasta & baconchips <span></span> (L) - 11.00&euro;</li><li>Rotsakssoppa med rostat bröd <span></span> (L) - 9.90&euro;</li><li>Bagel med kallrökt lax, pepparrot & en liten sallad <span></span> (H) - 9.90&euro;</li><li>Mexikanska böntacos med sallad, vegansk <span></span> (G, L, V) - 11.00&euro;</li></ul></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Bastö Bykrog - 0--><!--Passive! Bistro Avenue - 0--><div id="restaurant_65" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Bistro Avenue</div><div class="header_right">Norra Esplanadgatan 2, Mariehamn, tel. 3581814900</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/65.png?ts=1505740782"><p>Vi serverar lunch kl. 10.30 till 13.30 från måndag till fredag.<br />
+<br />
+Måndag till lördag serverar vi vår à la carte-meny från kl. 17.00.</p>Med reservation för ändringar.<br />
+Vi anpassar vår mat för allergiker i möjligaste mån.</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Fisk & skaldjursgryta med aioli och crostini <span></span></li><li>Penne med svamp, vitlök och parmesan <span></span></li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Kyckling" thai green curry" <span></span></li><li>Ärtsoppa med fläsk samt plättar med sylt och vispad grädde <span></span></li></ul>
+</div> <!--/.right--><div class="clear"></div></div> <!--/.ui-accordion-content--></div><!--Passive! Bistro Koppargrytan - 0--><div id="restaurant_45" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Bistro Koppargrytan</div><div class="header_right">Sparvägen 1, 22 150 Jomala, tel. +358 18 31 446</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.koppargrytan.ax" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/45.png?ts=1369402245"><p>Öppettider<br />
+Må-Fre  9.30-20 (köket 11-19, pizza 11-19.30)<br />
+<br />
+Lö  10-18 (köket 11-17, pizza 11-17.30)<br />
+Sö 12-18 (köket 12-16, pizza 12-17.30)</p>Lunchen serveras må-fre 10.30-14<br />
+Mjölk, vatten, salladsbuffe, hembakt bröd och kaffe ingår i maten<br />
+<br />
+<br />
+<br />
+<br />
+Även Take Away<br />
+Lunchkuponger 95€ för 10st<br />
+Vi har även en bistromeny, espresso, hemgjorda bakelser och mjukglass<br />
+<br />
+Med reservation för ändringar</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Veckans Sallad med mozzarela,rostade nötter och honungs pickles (G,V) 10,90 <span></span></li><li>Månadens pizza - oxfilé, bacon, rödlök och bea  14,50 <span></span></li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Chilirostad kycklingfilé med apelsin-currysås och ris  10,90 <span></span> (G, L)</li><li>Kaviar- och purjolöksströmming med potatismos  10,90 <span></span> (G, L)</li><li>Laxlasagne med fetaost  10,90 <span></span></li><li>Ärtsoppa med ålandspannkaka  10,90 <span></span> (L)</li><li>Dagens pizza - salami och jalapeno  10,90 <span></span></li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Bistro Savoy - 0--><div id="restaurant_7" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Bistro Savoy</div><div class="header_right">Nygatan 12, 22100 Mariehamn, tel. +35818 15 400</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.alandhotels.fi" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/7.png?ts=1275300202"><p>Pris 10,50 € (med kupong 9,50 € vid köp av 10 stycken) inkl. stor salladsbuffé, vatten, saft, bröd, smör och kaffe. Lunch serveras vardagar 10.30-13.30. Vi förbehåller oss rätten till ändringar.</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Veckans Burgare: Chipotle-bearnaise och pommes frites <span></span></li><li>Veckans vegetariska: Halloumiburgare med picklad rödlök, saltgurka, guacamole och pommes frites <span></span></li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Fläskschnitzel med champinjonsås och pommes frites <span></span></li><li>Kalvstek med gräddsås och kokt potatis <span></span> (L)</li><li>Kräftströmming med potatismos <span></span> (G)</li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Club Marin - 0--><!--Passive! Delicatessen - 0--><div id="restaurant_48" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Delicatessen</div><div class="header_right">Kofferdrigränd 10, Mariehamn, tel. 018-23077</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.delicatessen.ax" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/48.png?ts=1381749018"><p>Vi  har öppet Måndag till Fredag 8-18, Lördagar 10-16 Söndag/Helg stängt</p>Nyhet från oss nu serverar vi varm mat från 11,00. att ätas på plats eller för take away färdiga sallader matportioner finns i vår delli disk<br />
+Alla dagar kan man köpa smörgåstårta på bit, tunnbrödsrulle, bakad potatis med fyllning finns 5 olika röror, nybakat kaffebröd och matbröd, allt finns för avhämtning. Skall du ordna fest ring då oss för offert förslag. Inget är för litet eller för stort. Varmt Välkomna.</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Kycklingsoppa oriental <span></span> (G, L)</li><li>Wraps eller bakad potatis med valfri röra <span></span> (G, L)</li><li>Crêpes med olika fyllningar <span></span> (G, L)</li><li>Lyxräksmörgås <span></span> (L)</li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Köttsoppa, Ålandspannkaka, sylt, grädde <span></span> (G, L)</li><li>Stekt fisk Indienne, potatis <span></span> (G, L)</li><li>Crêpes med lax och räkröra <span></span> (G, L)</li><li>Marienard biffsallad, sparris <span></span> (G, L)</li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! GREAT subs & salads - 0--><div id="restaurant_50" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">GREAT subs & salads</div><div class="header_right">Torggatan 10, AX-22 100 Mariehamn, tel. +358 18 16 900</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.aland.com/se/great/start" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/50.png?ts=1386929039"><p>Hos Great kan du som kund komponera din egen sallad, sub (fyllt bröd) med mängder av goda och fräscha ingredienser.<br />
+<br />
+<br />
+Vi har öppet: <br />
+Måndag-fredag 10.00-15:00<br />
+<br />
+Välkomna!</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>GREAT SUB exempel <span></span></li><li>Club Sub (kyckling,bacon,valfri ost samt grönsaker <span></span></li><li>Tuna Sub ( Tonfiskröra,valfri ostsamt grönsaker,pröva den gärna varm) <span></span></li><li>Chicken teriyaki sub (Teriyaki marinerad kyckling,valfri ost samt grönsaker) <span></span></li><li>GREAT SALLAD  exempel <span></span></li><li>Ceasar sallad (Roman sallad ,kyckling, bacon, brödkrutonger, körsbärstomater, ce <span></span></li><li>Chicken teriyaki sallad (Bulgur, blandsallad, bacon, meloner, annanas, fetaost) <span></span></li><li>Taco sallad (mozarella ost, majs ,röd paprika, rödlök mm) <span></span></li></ul></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Hesburger - 0--><!--Passive! Indigo Restaurang & Bar - 0--><div id="restaurant_2" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Indigo Restaurang & Bar</div><div class="header_right">Nygatan 1, 22100 Mariehamn, tel. +35818 16 550</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.indigo.ax" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/2.png?ts=1275300201"><p>Lunchrätterna kostar 12.50€ och serveras vardagar 11.00-15.00. <br />
+Sallad, bröd, smör, isvatten samt kaffe eller te ingår i samtliga varmrätter. Vi serverar även à la carte samt mot beställning, affärslunch eller meny enligt överenskommelse. Vänligen kontakta oss om ni har frågor eller speciella önskemål.<br />
+Lunchkuponger 10 stycken för 110€ (kupongen gäller för dagens kött, veckans fisk, sallad, soppa & vegetarisk). Med förbehåll för ändringar i lunchmenyn.</p>Vi serverar också högrevsburgare, toast skagen och desserter lunchtid.<br />
+<br />
+Välkommen!</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Veckans à la carte</b></p><ul><li>Toast skagen med handskalade räkor blandade med majonnäs, dill och rödlök på toast, toppas med sikrom <span>liten 13.90€ / stor 18.90€</span> (L)</li><li>Veckans rätt (kräver lite längre tillredning) <span>Högrevsburgare med 100% åländskt nötkött serveras med tomat, sallad, karamelliserad lök, saltgurka, chipotlemajonnäs och pommes frites</span> (L)&nbsp;16.50&euro;</li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Biff rydberg på tärnad oxfilé och råstekt tärnad potatis serveras med stekt lök, äggula och dijonsenapscrème <span></span> (G, L)</li><li>Tom yam-soppa med lax, kräftstjärtar, kokos, morot, sockerärter, chili, koriander och nudlar <span></span> (L)</li><li>Sallad med rökt skinka, ålands specialost, vindruvor, rhode island-dressing och örtmarinerad pasta <span></span> (L)</li><li>Sötpotatissoppa med chèvrecrème och rostade nötter <span></span> (G, V)</li><li>Ricotta- och spenatfylld cannelloni med tomatsås, rostade pumpafrön, ruccola och parmesan <span></span> (V)</li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Iwa Konditori & Café - 0--><div id="restaurant_49" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Iwa Konditori & Café</div><div class="header_right">Torggatan 12, AX-22 100 Mariehamn, tel. 13 446</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.aland.com/se/iwa_konditori_&_cafe/start" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/49.png?ts=1385635590"><p>Vi har öppet mån-fre 9-16.30(köket 10.30-16), lör 10.30-15.30 (köket 11-15). Vi har en stående meny med olika soppor, sallader, pasta, pajer och smörgåsar som kostar från 10,50-13€. Vi har även veckans rätter som kostar 10,50. I allla rätter ingår brödbuffe med flera sorters hembakt bröd och olika röror och även kaffe/te. Alla maträtter går att ta som takeaway och vi har även ett stort utbud med bakverk. Varmt välkomna in och hitta din favorit.</p>Vi har lunchkuponger, 10 st för 99€, gäller för normalpris 10,90€</p></div> <!--/.left--><div class="restaurant_menu"><ul><li>STÅENDE MENY <span></span></li><li>Husets fisksoppa m lax, handskalade räkor o hemlagad aioli13€ <span></span> (G)</li><li>Thaikycklingsoppa m rödcurry, kokos, risnudlar o cashewnötter 10,90€ <span></span> (G, L)</li><li>Varm chevre m brynta rödbetor, honungsvalnötter, matvete o balsamico 12,50€ <span></span></li><li>Caesarsallad m varm örtkyckling, krutonger, bacon o parmesan 12,50€ <span></span> (L)</li><li>Sallad m spicy kycklingröra, fullkornspasta, rostade rotsaker o melon 10,90€ <span></span> (L)</li><li>Sallad m handskalade räkor, ägg, avokado, quinoa o chili-lime yoghurt 13€ <span></span> (G, L)</li><li>Dansk rågbröd m handskalade räkor, ägg o hemlagad majonnäs 9,50€ <span></span> (L)</li><li>VECKANS MENY <span></span></li><li>Indisk linssoppa m citronyoghurt o naanbröd 10,90€ <span></span> (L)</li><li>Pasta m rökt lax, spenatsås, pepparrot o ärtskott 10,90€ <span></span> (L)</li><li>Couscoussallad m harissakyckling, torkad aprikos, saltrostad mandel o vit böncreme 10,90€ <span></span> (L)</li><li>Pitabröd m pulled beef, coleslaw o picklad chili 8,50€ <span></span> (L)</li></ul></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Kvarter 5 - 0--><div id="restaurant_54" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Kvarter 5</div><div class="header_right">Norragatan 10, 22100 Mariehamn, tel. 018-15555</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.kvarter5.ax" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/54.png?ts=1425380392"><p>Öppet <br />
+kl. 11-14. <br />
+Dagens rätt 11,90 € (kupong 11,00 €) inklusive sallad, bröd, smör, isvatten samt kaffe eller te.<br />
+Varmt välkomna!</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Hardcorechilikorv, paprikamajonnäs, rostad potatis <span></span> (G, L)</li><li>Tacosallad med vitlöksdressing <span></span> (G, L)</li><li>Halloumi med myntayogurt,betor och matvete <span></span> (L)</li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Helstekt fläskfilé med vitlökscréme, skysås och pommes frites <span></span> (G, L)</li><li>Laxfilé med betor, potatisblomkålspuré, brynt smör och kapris <span></span> (G, L)</li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! LunchLådan på Rönngården - 0--><div id="restaurant_44" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">LunchLådan på Rönngården</div><div class="header_right">Pipsvarvargränd 2, 22150 Jomala, tel. +35818 32 077</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><div class="restaurant_info"><p>Vi serverar lunch vardagar mellan 10.30 - 13.00<br />
+Kaffe till 14.00. All mat även för avhämtning. <br />
+Lunchen kostar 9,50€<br />
+Med kupong 8,50€ ( 10 kuponger för 85€)<br />
+Välkomna!</p>Vi lagar smörgåstårtor, tårtor, bröllop och kalas på beställning. Du kan även ha ditt möte, minnesstund, dop kaffe på Rönngården.</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Kycklingsoppa oriental <span></span> (G, L)</li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Köttsoppa, Ålandspannkaka, sylt, grädde <span></span> (G, L)</li><li>Stekt fisk Indienne, potatis <span></span> (G, L)</li><li>Crêpes med lax och räkröra <span></span> (G, L)</li></ul>
+</div> <!--/.right--><div class="clear"></div></div> <!--/.ui-accordion-content--></div><!--Passive! Metropol Kolgrill och Bar - 0--><div id="restaurant_60" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Metropol Kolgrill och Bar</div><div class="header_right">Ålandsvägen 40, 22100 Mariehamn, tel. +358 18 13322</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/60.png?ts=1473944589"><p>Vi serverar lunch måndag-fredag kl. 10.30-13.00<br />
+<br />
+Pris 10 € för dagens lunchrätt.<br />
+<br />
+ÖVRIGA ÖPPETTIDER<br />
+Vardagar kl. 16.00-20.00<br />
+Fredag-lördag kl. 16.00-24.00<br />
+<br />
+I restaurangen finns tre avdelningar med sittplatser för sammanlagt 70 personer.</p></div> <!--/.left--><div class="restaurant_menu"><ul><li>Pannbiff med kantarellsås <span></span></li></ul>
+</div> <!--/.right--><div class="clear"></div></div> <!--/.ui-accordion-content--></div><!--Passive! Nonna Rina - 0--><div id="restaurant_61" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Nonna Rina</div><div class="header_right">Torget, Mariehamn, tel. 3584573451577</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="www.facebook.com/nonnarinaax" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/61.png?ts=1474977029"><p>Vi serverar lunch måndag-fredag klockan 11.00-14.00. Lunchpriset är 10 euro. Vi har även take-away. Veckans meny går även att få som glutenfri!<br />
+<br />
+I lunchen ingår sallad, hembakat bröd och kaffe/espresso eller té (11-14).<br />
+<br />
+Egen produktion av färsk pasta och betoning på lokala råvaror.<br />
+<br />
+Belgiska Våfflor och ett brett utbud av espressokaffe.</p>Öppet:<br />
+Måndag-Fredag: 11.00-15.00<br />
+Lördag: 13.00-20.00<br />
+Söndag: 13.00-17.00</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Pasta Carbonara: <span>traditionell Carbonara på rökt fläsksida och riven pecorino ost</span></li><li>Pasta Bolognese <span></span></li><li>Pasta Quattro Formaggi: <span>färskpasta med fyra ostar</span> (V)</li><li>Pasta Pesto: <span>husets egna pesto serveras med färskpasta, parmesan och rucola</span> (V)</li><li>Pasta Puttanesca: <span>färskpasta med oliver & kapris i tomatsås</span> (V)</li><li>Alla pastarätter går även att få glutenfria! <span></span> (G)</li><li>Hela vår pizzameny serveras även under lunchen! <span></span></li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>PIZZABUFFÉ <span></span></li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Park Restaurang & Bar - 0--><div id="restaurant_4" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Park Restaurang & Bar</div><div class="header_right">Norra Esplanadgatan 3, 22100 Mariehamn, tel. +358 18 527 555</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.park.ax" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/4.png?ts=1505898222"><p>Vi serverar lunch mån-fre mellan 10.30-13.00<br />
+Puben öppnar 10.30 och så beställer du lunch vid baren. <br />
+Välkommen!</p>10,20 för dagens och flera av veckans alternativ.<br />
+I priset ingår sallad, nybakt bröd och smör samt kaffe på maten!</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Falafel i pitabröd med vitlöksås och tomatröra <span></span> (L)</li><li>Kycklingsoppa med nudlar, cocosmjölk, koriander, lime,chili <span></span> (L)</li><li>Höstsallad m rödbetor, getost, linser, rost.valnötter, balsamico <span></span> (G, L)</li><li>Grillad hamburgare med ost, bacon,pico de gallo, bearnaise och pommes 13.- <span></span></li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Kalvstek med gräddsås och gelé och kokt potatis <span></span> (G, L)</li><li>Wok med curryräkor och grönsaker, jasminris <span></span> (G, L)</li><li>Ärtsoppa och fattiga riddare med sylt o grädde <span></span></li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Restaurang Arkipelag - 0--><div id="restaurant_10" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Restaurang Arkipelag</div><div class="header_right">Strandgatan 35, 22100 Mariehamn, tel. +358 18 24020</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.hotellarkipelag.com" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/10.png?ts=1275300201"><p>Lunchbuffé 11€ inklusive sallad, bröd och kaffe.<br />
+Lunchkuponger 10 st 100€.<br />
+<br />
+Måndag-fredag kl 10.30-14.00.<br />
+<br />
+Varmt välkommen!</p></div> <!--/.left--><div class="restaurant_menu"><ul><li>Stekt gös och purjolöksås <span></span> (G, L)</li><li>Ärtsoppa <span></span></li><li>Friterade grönsaker med dipp <span></span> (V)</li><li>Plättar, sylt och grädde <span></span></li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Restaurang Masala - 0--><!--Passive! Restaurang Nautical - 0--><div id="restaurant_6" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Restaurang Nautical</div><div class="header_right">Hamngatan 2, 22100 Mariehamn, tel. +35818 19 931</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.nautical.ax" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/6.png?ts=1307606667"><p>Lunch serveras mellan 11-17, listan uppdateras varje dag.<br />
+Boka gärna bord på tel: 19 931<br />
+<br />
+Lunchkuponger EUR 110 för 10 st.<br />
+<br />
+VECKANS AFFÄRSLUNCH:<br />
+Varmrätt 29,-<br />
+Två rätter 35,-<br />
+Tre rätter 41,-</p>VARMT VÄLKOMNA!<br />
+Med reservation för ändringar!</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>VECKANS AFFÄRSLUNCH <span></span></li><li>Förrätt: Halstrad pilgrimsmussla med blåmusselskum och rökt sidfläsk <span></span></li><li>Fiskvarmrätt: Halstrad rödingfilé med havskräftsskum, tomatvinägrett och vitlökspuré <span></span></li><li>Köttvarmrätt: Majskyckling med bordelaisesås, rödvinssmör och potatispuré <span></span></li><li>Dessert: Tiramisu <span></span></li><li>VECKANS SALLAD <span></span> - 13.50&euro;</li><li>Sotad kyckling med tzatziki och quinoa <span></span></li><li>VECKANS VEGETARISKA <span></span> - 13.50&euro;</li><li>Vichysoisse med ostgratinerad kantarelltoast <span></span></li><li>KLASSIKER, Förrätter <span></span></li><li>Sikromstoast med smetana, rödlök och citron <span></span> - 14.00&euro;</li><li>Moules Marinéres <span></span> - 12.00&euro;</li><li>KLASSIKER, Varmrätter <span></span></li><li>Strömmingsflundror med pepparrot, pressgurka och potatismos <span></span> - 16.00&euro;</li><li>Nauticlas köttbullar i gräddsås med rårörda lingon och potatismos <span></span> - 16.00&euro;</li><li>Viltskav med höstkantareller, rårörda lingon och potatismos <span></span> - 17.00&euro;</li><li>Biff Rydberg <span></span> - 29.00&euro;</li><li>De flesta av våra rätter går att få både gluten och laktosfria! <span></span></li><li>Med reservation för ändringar! <span></span></li><li>Dagens husman serveras fram till kl 14.00 <span></span></li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Ärtsoppa följt av Ålandspannkaka  med sylt och grädde <span></span></li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Restaurang Sittkoffska Gården - 0--><div id="restaurant_53" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Restaurang Sittkoffska Gården</div><div class="header_right">Torggatan 13, Ax 22 100 Mariehamn, tel. 1817612</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.aland.com/se/sittkoffska" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/53.png?ts=1428385615"><p>Lunchpris 10.90€<br />
+Veckans sallad/veckans vegetariska 10.90€</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Veckans vegetariska: Fransk lins och bön gryta med örtkräm och rostadpotatis <span></span> (G, L, V)</li><li>Veckans sallad: Hemlagad rostbiff med potatis sallad, oliver och kapris <span></span> (G, H)</li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Stekt torsk med hummersås och potatisstomp <span></span> (H)</li><li>Schnitzel med vitlökssmör, citron och röstipotatis <span></span> (H)</li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Röda Korsgården - 0--><div id="restaurant_43" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Röda Korsgården</div><div class="header_right">Västra Esplanadgatan 5, 22100 Mariehamn, tel. +35818 12 741</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.aland.com/bjorntjanster" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/43.png?ts=1359972792"><p>Välkommen till Röda Korsgårdens Matsal!<br />
+Vi erbjuder en dagens rätt från buffé och det ingår måltidsdryck, bröd, salladsbord & dessert.<br />
+Pris per person 9,00€ (10-kuponger 85€)</p>Vi gör även leveransluncher och catering stort som smått!<br />
+Begär offert på tel: 12741 eller mail: bjorne@aland.net</p></div> <!--/.left--><div class="restaurant_menu"><ul><li>Kycklingpastagratäng med ruccolasallad <span></span> (L)</li><li>Marängsviss <span></span></li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Shandiz Kebab & Pizzeria - 0--><!--Passive! Smakbyn - 0--><div id="restaurant_58" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Smakbyn</div><div class="header_right">Slottsvägen 134, 22520 Kastelholm, tel. +358 18 43 666</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="http://www.smakbyn.ax" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/58.png?ts=1460024518"><p>Välkommen till Smakbyn!<br />
+<br />
+Vi serverar lunch mån-fre kl 11-15.<br />
+I alla luncher ingår sallad, bröd, vatten/mjölk samt kaffe eller te. Vi har alltid en dagens rätt för en tia! <br />
+<br />
+Även take away.<br />
+Lunchkuponger 95 € för 10 st.<br />
+<br />
+Med reservation för ändringar.</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Potatis- och purjolökssoppa, 10 <span></span></li><li>Oxytterfilé med stekt lök och rödvinssky, 12 <span></span></li><li>Ugnsbakad forell från Föglö med örtsås och potatiskompott, 12 <span></span></li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Ärtsoppa och Mickes plättar, 10 <span></span></li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Svarta Katten - 0--><div id="restaurant_37" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Svarta Katten</div><div class="header_right">Norragatan 15, 22100 Mariehamn, tel. +358 18 21599</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><a href="https://www.svartakatten.ax" target="_blank" style="display: block"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/37.png?ts=1327666035"><p>Allt från  goda klassiska bakverk, till  LCHF, sockerfri och allergivänlig mat hittar du hos oss. Vi jobbar med närproducerade och färska varor för att ge dig en fantastisk smakupplevelse. <br />
+&#8203;<br />
+Kolla in vår meny, så ses vi!<br />
+<br />
+Alla sallader går att fås som LCHF, glutenfria <br />
+<br />
+Med reservation för att ändringar kan förekomma.<br />
+<br />
+Öppettider:<br />
+Måndag-tisdag 10:00-18:00<br />
+Onsdag-fredag 10:00-20:00<br />
+Lördag 10:30-16:30</p></div> <!--/.left--><div class="restaurant_menu"><p><b>Serveras hela veckan</b></p><ul><li>Sallad med kycklingröra/ spiced kycklingröra 10,50 € <span></span> (L)</li><li>Sallad med tonfiskröra 10,50 € <span></span> (L)</li><li>Sallad med räkröra 11,50 € <span></span> (L)</li><li>Tacosallad 11,50 € <span></span> (G, L)</li><li>Rödbeta & halloumisallad 11,50 € <span></span> (G, L, V)</li><li>Smörgås med  kycklingröra / spiced kycklingröra 6,50 € <span></span> (L)</li><li>Smörgås med tonfiskröra 6,50 € <span></span> (L)</li><li>Smörgås med räkröra 6,80 € <span></span> (L)</li><li>Smörgås med ost & skinka 6,00 € <span></span> (L)</li><li>Rödbeta & getostpaj LCHF,G 11,00 € <span></span> (G, L, V)</li><li>Tacopaj LCHF, G 10,00 € <span></span> (G, L)</li><li>Ost& skinkpaj med ädelost LCHF, G 10,00 € <span></span> (G, L)</li><li>Toast med valfri fyllning tonfisk/räk/kycklingröra <span></span> (L)</li></ul><p><b>Dagens lunch 19.10.2017</b></p><ul><li>Zucchini tortilla fylld med köttfärs med sallad, LCHF -10,90 € <span></span> (G, L)</li><li>Nachotallrik serveras med köttfärs, G,L 10,90 <span></span> (G, L)</li><li>Nachotallrik serveras med chevré G,L 10,90 <span></span> (G, L)</li></ul>
+</div> <!--/.right--><div class="clear"></div></a></div> <!--/.ui-accordion-content--></div><!--Passive! Time Out - 0--><div id="restaurant_11" class="restaurant"><div class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-top header"><div class="header_left">Time Out</div><div class="header_right">Elverksgatan 10, 22100 Mariehamn, tel. +35818 12 006</div></div><div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active content"><div class="restaurant_info"><img align="right" style="margin: 0 0 5px 5px; width: 100px;" src="http://www.aland.com/img/lunchguiden/11.png?ts=1286196658"><p>I lunchen ingår salladsbord, bröd, smör, mjölk och kaffe. En lunch kostar 9,60€, 10 st lunchkuponger för 89,00€. Öppet mellan 8.00-15.00, lunchen serveras 10.30-13.30, Måndag till Fredag, välkomna!</p></div> <!--/.left--><div class="restaurant_menu"><ul><li>Ärtsoppa med plättar, sylt, grädde & punsch <span></span> (G, L)</li><li>Marinerad kyckling med tsatsiki och pommes frites <span></span> (G, L)</li><li>Sallad med quiona, ljummen chevre, rostade cashewnötter & vitlöksbröd <span></span> (V, H)</li></ul>
+</div> <!--/.right--><div class="clear"></div></div> <!--/.ui-accordion-content--></div><!--Passive! Ångbåtsbryggans Äventyrsgolf - 0--><!--Passive! ÅSS Paviljongen - 0-->
+
+						</div> <!--/#restaurants-->
+
+					</div> <!--/.grid_8 .lunch-scope-->
+
+					<div class="grid_4">
+						
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=30&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=35&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=38&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=39&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=40&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+<div id="mod_event_highlights" class="module">
+	<img src="http://www.aland.com/img/acom_tipsar_1_1.png" alt="aland.com tipsar" />	<ul><li><a href="http://www.aland.com/se/evenemang/hostlov_oppet_pa_kastelholms_slott/9748">Höstlov: Öppet på Kastelholms slott</a></li><li><a href="http://www.aland.com/se/evenemang/jazz_jazz_i_restaurang_oliven_i_mariehamn/9760">Jazz: Jazz i restaurang Oliven i Mariehamn</a></li><li><a href="http://www.aland.com/se/evenemang/jazz_jazz_i_restaurang_oliven_i_mariehamn/9780">Jazz: Jazz i restaurang Oliven i Mariehamn</a></li><li><a href="http://www.aland.com/se/evenemang/teater_familjen_spelas_pa_stadshuset_i_mariehamn/9774">Teater: "Familjen" spelas på stadshuset i Mariehamn</a></li></ul>	<div id="event_tip">
+		<a href="http://www.aland.com/se/tipsa_om_evenemang">Tipsa om evenemang <span class="raquo">&raquo;</span></a>
+	</div>
+</div> <!--/#mod_event_highlights--><div id="mod_mapa" class="module compact"><div id="feed"><a name="mapa" href="http://www.mapafishingteam.com"><img src="http://www.aland.com/img/mapa_new.png" /></a><ul>	<li>
+							<div class="article_big">
+								<h2>
+									<a target='_blank' href="http://www.mapafishingteam.com/sv/rapporter/ons_1810_plus_6kilos_gled_ur_haven/5622"><span class="date">Ons 18.10 </span>	 Plus 6	kilos gled ur håven</a>
+								</h2><div class="art_ingress">
+									<a target='_blank' href="http://www.mapafishingteam.com/sv/rapporter/ons_1810_plus_6kilos_gled_ur_haven/5622">
+										Ajdå hur de kan krackla...för dagens största gädda ville inte komma upp för fotografering...
+									</a>
+								</div>
+							</div>
+						</li>
+	<li>
+							<div class="article_big">
+								<h2>
+									<a target='_blank' href="http://www.mapafishingteam.com/sv/rapporter/ti_1710_solen_raddde_en_omojlig_fiskedag/5621"><span class="date">Ti 17.10 </span>	 Solen räddade en omöjlig fiskedag</a>
+								</h2><div class="art_ingress">
+									<a target='_blank' href="http://www.mapafishingteam.com/sv/rapporter/ti_1710_solen_raddde_en_omojlig_fiskedag/5621">
+										Idag tror jag att vi fick vara med om den mörkaste morgonen på år och dag. För ännu kl 10...
+									</a>
+								</div>
+							</div>
+						</li>
+	<li>
+							<div class="article_big">
+								<h2>
+									<a target='_blank' href="http://www.mapafishingteam.com/sv/rapporter/ma_1610_/5620"><span class="date">Må 16.10 </span>	 Sista dan gav 32 och 5,1 på topp</a>
+								</h2><div class="art_ingress">
+									<a target='_blank' href="http://www.mapafishingteam.com/sv/rapporter/ma_1610_/5620">
+										Tredje och sista dagen med toppengänget från ÅF slutade med 32 gäddor. I alltför fint...
+									</a>
+								</div>
+							</div>
+						</li>
+</ul></div> <!--/#feed--><a href="http://www.aland.com/se/se_och_gora/sportfiske_och_jakt#mapa"><img src="http://www.aland.com/img/mapa_more.png" /></a></div> <!--/#mod_mapa-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=41&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+					</div> <!--/.grid_4-->
+
+					<div class="clear"></div>
+
+					<div class="hr"></div>
+
+					<div class="grid_2 sixth_block"><p><a href="http://www.aland.com/se/evenemang_pa_aland"><img src="http://www.aland.com/assets/scale_image.con?image=lower_01.gif&height=65&cropratio=138:65"></a></p><h2>Evenemang</h2><p><a href="http://www.aland.com/se/evenemang_pa_aland">Vad h&auml;nder p&aring; &Aring;land? S&ouml;k i kalendern och kolla in vilka evenemang aland.com rekommenderar just nu.</a></p></div><div class="grid_2 sixth_block"><p><a href="http://www.aland.com/se/mat_och_nojen"><img src="http://www.aland.com/assets/scale_image.con?image=lower_02.gif&height=65&cropratio=138:65"></a></p><h2>Mat & nöjen</h2><p><a href="http://www.aland.com/se/mat_och_nojen">Man blir glad av god mat! P&aring; v&aring;ra mat och n&ouml;jessidor hittar du allt fr&aring;n lunchguiden till tips p&aring; restauranger.</a></p></div><div class="grid_2 sixth_block"><p><a href="http://www.aland.com/se/shopping_pa_aland"><img src="http://www.aland.com/assets/scale_image.con?image=lower_03.gif&height=65&cropratio=138:65"></a></p><h2>Shopping</h2><p><a href="http://www.aland.com/se/shopping_pa_aland">F&aring; massor med fina shoppingtips - allt fr&aring;n butiker i Mariehamn till konsthantverk, mat och goda drycker.</a></p></div><div class="grid_2 sixth_block"><p><a href="http://www.aland.com/se/se_och_gora"><img src="http://www.aland.com/assets/scale_image.con?image=lower_04.gif&height=65&cropratio=138:65"></a></p><h2>Se & göra</h2><p><a href="http://www.aland.com/se/se_och_gora">Myror i byxorna? Det &auml;r l&auml;tt ordnat! V&aring;ra Se och g&ouml;ra-sidor bjuder p&aring; massor med tips f&ouml;r dig som inte vill sitta still.</a></p></div><div class="grid_2 sixth_block"><p><a href="http://www.aland.com/se/resa_och_bo"><img src="http://www.aland.com/assets/scale_image.con?image=lower_05.gif&height=65&cropratio=138:65"></a></p><h2>Resa & bo</h2><p><a href="http://www.aland.com/se/resa_och_bo">H&auml;r hittar du allt beh&ouml;ver veta inf&ouml;r &Aring;landsbes&ouml;ket. N&auml;r g&aring;r b&aring;ten? Var kan jag boka? Var vill jag bo?</a></p></div><div class="grid_2 sixth_block"><p><a href="http://www.aland.com/se/moten"><img src="http://www.aland.com/assets/scale_image.con?image=lower_06.gif&height=65&cropratio=138:65"></a></p><h2>Möten</h2><p><a href="http://www.aland.com/se/moten">L&auml;get &auml;r perfekt, mitt mellan Sverige och Finland. H&auml;r h&auml;mtar du inspirationen till ditt M&ouml;tes&Aring;land!</a></p></div>
+					<div class="clear"></div>
+					<div class="hr"></div>
+
+				</div> <!--/#wrapper .container_12-->
+
+
+			</div> <!--/#design_wrapper-->
+			
+			<div id="outer_ads_wrapper">
+								
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=10&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=11&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=12&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			<div class="mod_banner" >
+				<script type='text/javascript'>
+				<!--//<![CDATA[
+					//var m3_u = (location.protocol=='https:'?'https://ads.aland.com/revive/www/delivery/ajs.php':'http://ads.aland.com/revive/www/delivery/ajs.php');
+					var m3_u = 'https://ads.aland.com/revive/www/delivery/ajs.php';
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ("?zoneid=13&amp;source=*&amp;pac_id=11&amp;pag_id=41&amp;lang=1&amp;target=_blank&amp;block=1");
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					document.write ("&amp;loc=" + escape(window.location));
+					if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					if (document.context) document.write ("&context=" + escape(document.context));
+					if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					document.write ("'><\/scr"+"ipt>");
+				//]]>-->
+				</script>
+			</div> <!--/.mod_banner-->
+			</div> <!--/#outer_ads_wrapper-->
+
+		</div> <!--/#framework_wrapper-->
+
+		<div id="footer_wrapper">
+			<div id="footer">
+				<div id="footer_left" class="container_12">
+					<div class="grid_2 footersection ftrtop">
+						<p>
+<a href="http://www.strax.ax" target="_blank"><b>© Strax Kommunikation Ab</b><br />
+</a>Strandgatan 16<br />
+22100 Mariehamn<br />
++358(0)18 525 875<a href="http://www.strax.ax" target="_blank"></a>
+</p>
+<p>
+Samarbetspartners:<br />
+<a href="https://www.consilia.fi/" target="_blank">Consilia Solutions</a>
+</p>					</div>
+					<div class="grid_3 footersection ftrtop">
+						<ul>
+	<li><a href="http://www.aland.com/om_alandcom">Om aland.com</a></li>
+	<li><a href="http://www.aland.com/annonsera">Annonsera</a></li>
+	<li><a href="http://www.aland.com/kontakta_redaktionen">Kontakta redaktionen</a></li>
+	<li><a href="http://www.aland.com/foretag_aland">Företag A-Ö</a></li>
+	<li><a href="http://www.aland.com/ekonomi">Valutakalkylatorn</a></li>
+</ul>					</div>
+					<div class="grid_3 footersection ftrtop">
+					<b>Tipsa och dela med andra</b>						<!-- AddThis Button BEGIN -->
+						<div class="addthis_toolbox_footer addthis_default_style">
+							<a class="addthis_button_facebook"></a>
+							<a class="addthis_button_email"></a>
+							<a class="addthis_button_favorites"></a>
+							<a class="addthis_button_print"></a>
+							<a class="addthis_button_twitter"></a>
+
+							<span class="addthis_separator">|</span>
+							<a href="http://www.addthis.com/bookmark.php?v=250&amp;username=straxonine" class="addthis_button_expanded">Fler</a>
+							
+													</div>
+						<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=straxonine"></script>
+						<!-- AddThis Button END -->
+
+					</div>
+					<div class="grid_3 ftrtop">
+						<a href="http://www.aland.com/aland_classics"><b>Aland.com Klassisk version</b><br />
+Det populäraste innehållet från &quot;gamla&quot; aland.com.<br />
+<br />
+Här når du snabbt telefonkatalogen, lunchguiden, nyhetsöversikten och valutakalkylatorn.</a>					</div>
+					<div class="clear"></div>
+				</div> <!--/#footer_left.container_12-->
+				<div id="footer_right">
+				</div> <!--/#footer_right-->
+			</div> <!--/#footer-->
+		</div> <!--/#footer_wrapper-->
+				<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+			try {
+				var pageTracker = _gat._getTracker("UA-2148481-8");
+				pageTracker._trackPageview();
+			} catch(err) {
+			}
+		</script>
+			</body>
+</html>

@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.commons.lang3.time.DateUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,22 +23,22 @@ public class SchnitzelService {
 	/** Logging utility */
 	private final static Logger LOG = LoggerFactory.getLogger(SchnitzelService.class);
 
+	/** Injected dependency used to fetch */
 	@Autowired
 	private LunchguidenRepository lunchguiden;
 
+	/** Local cache of restaurants and their schnitzel dishes of the day */
 	private List<Restaurant> cachedRestaurants = new ArrayList<Restaurant>(0);
 
+	/** Date when the local cache of restaurants was last successfully updated */
 	private Date lastUpdate;
 
-	public SchnitzelService() {
-
-	}
-
+	/** Scheduled method for updating the local cache of restaurants. */
 	@PostConstruct
 	@Scheduled(cron = "0 0 0,9,10,11,12,13 * * MON-FRI")
 	public void updateRestaurants() {
 		try {
-			List<Restaurant> newlist = lunchguiden.get();
+			List<Restaurant> newlist = lunchguiden.getRestaurants();
 			synchronized (cachedRestaurants) {
 				cachedRestaurants.clear();
 				cachedRestaurants.addAll(newlist);
@@ -46,15 +47,22 @@ public class SchnitzelService {
 		}
 		catch (Exception e) {
 			LOG.error(e.getMessage(), e);
+
+			if (lastUpdate != null && !DateUtils.isSameDay(lastUpdate, new Date())) {
+				LOG.info("Resetting lastUpdate to trigger an error message on the web page");
+				this.lastUpdate = null;
+			}
 		}
 	}
 
+	/** @return immutable list of {@link cachedRestaurants} */
 	public List<Restaurant> getRestaurants() {
 		synchronized (cachedRestaurants) {
 			return Collections.unmodifiableList(cachedRestaurants);
 		}
 	}
 
+	/** @return see {@link lastUpdate} */
 	public Date getLastUpdate() {
 		return lastUpdate;
 	}
