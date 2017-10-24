@@ -18,6 +18,8 @@ cd /home/ec2-user/
 # Set up Gradle
 mkdir .gradle/
 echo "org.gradle.daemon=false" > .gradle/gradle.properties
+echo "org.gradle.parallel=true" >> .gradle/gradle.properties
+echo "org.gradle.jvmargs=-agentlib:TakipiAgent" >> .gradle/gradle.properties
 
 # Install schnitzel.ax web app
 wget https://github.com/pheimdah/schnitzel.ax/archive/master.zip
