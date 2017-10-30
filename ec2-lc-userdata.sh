@@ -32,9 +32,18 @@ chown -R ec2-user:ec2-user /home/ec2-user/
 # Start schnitzel.ax web app
 cd schnitzel.ax-master/
 sudo -u ec2-user bash -c "sh gradlew bootRun > logs/server.log 2>&1 &"
+cd
 
 # Set up a 1 GiB swap file
 dd if=/dev/zero of=/swapfile bs=1024 count=1048576
 mkswap /swapfile
 chmod 0600 /swapfile
 swapon /swapfile
+
+# Install some useful utilities
+yum --assumeyes install htop telnet jq
+
+# Disable the sendmail service
+chkconfig sendmail off
+service sendmail stop
+
