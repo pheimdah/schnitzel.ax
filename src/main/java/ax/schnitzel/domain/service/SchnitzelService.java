@@ -23,11 +23,11 @@ public class SchnitzelService {
 	/** Logging utility */
 	private final static Logger LOG = LoggerFactory.getLogger(SchnitzelService.class);
 
-	/** Injected dependency used to fetch */
+	/** Injected dependency used to fetch restaurants and their schnitzel dishes of the day */
 	@Autowired
 	private LunchguidenRepository lunchguiden;
 
-	/** Local cache of restaurants and their schnitzel dishes of the day */
+	/** Local cache of {@link LunchguidenRepository} results */
 	private List<Restaurant> cachedRestaurants = new ArrayList<Restaurant>(0);
 
 	/** Date when the local cache of restaurants was last successfully updated */
