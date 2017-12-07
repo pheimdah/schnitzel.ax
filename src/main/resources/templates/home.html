@@ -90,10 +90,10 @@
 				<div class="alert alert-info" role="alert" style="display:inline-block;">Ingen lunchschnitzel på helger, kom tillbaka på måndag</div>
 			</th:block>
 			<th:block th:unless="${isWeekend}">
-				<th:block th:if="${lastUpdated == null}">
+				<th:block th:if="${!updatedToday}">
 					<div class="alert alert-danger" role="alert" style="display:inline-block;">Ett fel har uppstått &#9785;</div>
 				</th:block>
-				<th:block th:unless="${lastUpdated == null}">
+				<th:block th:unless="${!updatedToday}">
 					<th:block th:if="${restaurants.empty}">
 						<div class="alert alert-info" role="alert" style="display:inline-block;">Ingen schnitzel idag &#3232;&lowbar;&#3232;</div>
 					</th:block>

@@ -7,7 +7,6 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 
-import org.apache.commons.lang3.time.DateUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,11 +46,6 @@ public class SchnitzelService {
 		}
 		catch (Exception e) {
 			LOG.error(e.getMessage(), e);
-
-			if (lastUpdate != null && !DateUtils.isSameDay(lastUpdate, new Date())) {
-				LOG.info("Resetting lastUpdate to trigger an error message on the web page");
-				this.lastUpdate = null;
-			}
 		}
 	}
 

@@ -50,17 +50,15 @@ public class LunchguidenRepository {
 
 		// TODO: Convert to Java 8 Lambdas?
 		for (Element restaurantElement : lunchguiden.getElementById("restaurants").getElementsByClass("restaurant")) {
-			String id = restaurantElement.id();
-
 			Element menuElement = restaurantElement.getElementsByClass("restaurant_menu").get(0);
 
 			if (StringUtils.containsIgnoreCase(menuElement.toString(), "schnitzel")) {
 
 				final Restaurant restaurant = new Restaurant();
-				restaurant.setId(id);
+				restaurant.setId(restaurantElement.id());
 				restaurant.setName(restaurantElement.getElementsByClass("header_left").get(0).text());
 
-				LOG.info("Setting up " + restaurant.getName());
+				LOG.info("Setting up {}", restaurant.getName());
 
 				List<String> dishes = new ArrayList<String>(0);
 

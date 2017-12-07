@@ -2,7 +2,9 @@ package ax.schnitzel.interfaces.web;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.util.Date;
 
+import org.apache.commons.lang3.time.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,7 +28,10 @@ public class HomeController {
 	public ModelAndView home(final Model model) {
 
 		model.addAttribute("restaurants", schnitzelService.getRestaurants());
-		model.addAttribute("lastUpdated", schnitzelService.getLastUpdate());
+
+		Date lastUpdate = schnitzelService.getLastUpdate();
+		model.addAttribute("lastUpdated", lastUpdate);
+		model.addAttribute("updatedToday", lastUpdate != null && DateUtils.isSameDay(lastUpdate, new Date()));
 
 		DayOfWeek dayOfWeek = LocalDate.now().getDayOfWeek();
 		model.addAttribute("isWeekend", (dayOfWeek == DayOfWeek.SATURDAY || dayOfWeek == DayOfWeek.SUNDAY));
