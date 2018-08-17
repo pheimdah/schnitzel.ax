@@ -50,8 +50,8 @@
 				max-width: 680px;
 				padding: 0 15px;
 			}
-			.current {
-				font-weight: bold;
+			.chosenDay {
+				text-decoration: underline;
 			}
 		</style>
 	
@@ -89,41 +89,34 @@
 			<table style="margin: 0 auto;">
 				<th:block th:each="day : ${days}">
 					<td style="padding: 0 4px;">
-						<a th:attr="href=${dayStat.index > 0} ? '?day=' + ${day.date} : '/'"
-						   th:classappend="${day.date == chosenDay or (chosenDay == '' and dayStat.index == 0)} ? 'current' : ''"
-						   th:text="${day.name}"></a>
+						<a th:attr="href=${dayStat.index > 0} ? '?day=' + ${day.date} : '/'" th:classappend="${day.date == chosenDay or (chosenDay == '' and dayStat.index == 0)} ? 'chosenDay' : ''" th:text="${day.name}"></a>
 					</td>
 				</th:block>
 			</table>
 
 			<!-- Don't display this message if another day than today has been chosen -->
-			<p class="lead" style="padding-top: 10px" th:style="${chosenDay != ''} ? 'visibility:hidden' : 'visibility:visible'">Schnitzel serveras idag på &hellip;</p>
+			<p class="lead" style="padding-top: 10px">Schnitzel serveras <span th:text="${!isWeekend and chosenDay == ''} ? 'idag' : 'denna dag'"></span> på &hellip;</p>
 			<hr />
-			
-			<th:block th:if="${isWeekend}">
-				<div class="alert alert-info" role="alert" style="display:inline-block;">Ingen lunchschnitzel på helger, kom tillbaka på måndag</div>
+
+			<th:block th:if="${!updatedToday}">
+				<div class="alert alert-danger" role="alert" style="display:inline-block;">Ett fel har uppstått &#9785;</div>
 			</th:block>
-			<th:block th:unless="${isWeekend}">
-				<th:block th:if="${!updatedToday}">
-					<div class="alert alert-danger" role="alert" style="display:inline-block;">Ett fel har uppstått &#9785;</div>
+			<th:block th:unless="${!updatedToday}">
+				<th:block th:if="${restaurants.empty}">
+					<div class="alert alert-info" role="alert" style="display:inline-block;">Ingen schnitzel <span th:text="${!isWeekend and chosenDay == ''} ? 'idag' : 'denna dag'"></span> &#3232;&lowbar;&#3232;</div>
 				</th:block>
-				<th:block th:unless="${!updatedToday}">
-					<th:block th:if="${restaurants.empty}">
-						<div class="alert alert-info" role="alert" style="display:inline-block;">Ingen schnitzel idag &#3232;&lowbar;&#3232;</div>
-					</th:block>
-					<th:block th:unless="${restaurants.empty}">
-						<dl>
-							<th:block th:each="restaurant : ${restaurants}">
-								<dt><a data-toggle="collapse" th:attr="href='#'+${restaurant.id}+'_menu'" th:text="${restaurant.name}" class="text-secondary"></a></dt>
-								<div class="collapse show" th:id="${restaurant.id}+'_menu'" style="padding-left: 10px">
-									<dd class="text-muted font-italic" th:each="dish : ${restaurant.dishes}" th:text="${dish}" />
-								</div>
-							</th:block>
-						</dl>
-					</th:block>
+				<th:block th:unless="${restaurants.empty}">
+					<dl>
+						<th:block th:each="restaurant : ${restaurants}">
+							<dt><a data-toggle="collapse" th:attr="href='#'+${restaurant.id}+'_menu'" th:text="${restaurant.name}" class="text-secondary"></a></dt>
+							<div class="collapse show" th:id="${restaurant.id}+'_menu'" style="padding-left: 10px">
+								<dd class="text-muted font-italic" th:each="dish : ${restaurant.dishes}" th:text="${dish}" />
+							</div>
+						</th:block>
+					</dl>
 				</th:block>
-				<div>Se hela lunchmenyn på <a href="http://www.aland.com/se/mat_och_nojen/lunchguiden">aland.com</a><br/></div>
 			</th:block>
+			<div>Se hela lunchmenyn på <a href="http://www.aland.com/se/mat_och_nojen/lunchguiden">aland.com</a><br/></div>
 		</div>
 
 		<footer class="footer">
