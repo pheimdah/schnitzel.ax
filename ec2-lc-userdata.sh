@@ -1,6 +1,10 @@
 #!/bin/bash
 set -ex
 
+# Bind Elastic IP
+instance_id=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+aws ec2 associate-address --instance-id $instance_id --public-ip 3.120.127.171
+
 # Forward incoming requests on port 80 to local port 8080
 iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
 
