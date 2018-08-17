@@ -1,6 +1,10 @@
 #!/bin/bash
 set -ex
 
+# AWS CLI
+mkdir /root/.aws/          ; echo -e "[default]\nregion=eu-central-1" > /root/.aws/config
+mkdir /home/ec2-user/.aws/ ; echo -e "[default]\nregion=eu-central-1" > /home/ec2-user/.aws/config
+
 # Bind Elastic IP
 instance_id=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 aws ec2 associate-address --instance-id $instance_id --public-ip 3.120.127.171
