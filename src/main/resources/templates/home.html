@@ -50,6 +50,9 @@
 				max-width: 680px;
 				padding: 0 15px;
 			}
+			.current {
+				font-weight: bold;
+			}
 		</style>
 	
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer="defer" />
@@ -83,7 +86,18 @@
 		</script>
 
 		<div class="container" style="font-size: 18px;">
-			<p class="lead" style="padding-top: 10px">Schnitzel serveras idag på &hellip;</p>
+			<table style="margin: 0 auto;">
+				<th:block th:each="day : ${days}">
+					<td style="padding: 0 4px;">
+						<a th:attr="href=${dayStat.index > 0} ? '?day=' + ${day.date} : '/'"
+						   th:classappend="${day.date == chosenDay or (chosenDay == '' and dayStat.index == 0)} ? 'current' : ''"
+						   th:text="${day.name}"></a>
+					</td>
+				</th:block>
+			</table>
+
+			<!-- Don't display this message if another day than today has been chosen -->
+			<p class="lead" style="padding-top: 10px" th:style="${chosenDay != ''} ? 'visibility:hidden' : 'visibility:visible'">Schnitzel serveras idag på &hellip;</p>
 			<hr />
 			
 			<th:block th:if="${isWeekend}">
