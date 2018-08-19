@@ -86,7 +86,7 @@ public class LunchguidenRepository {
 		for (Element dayElement : lunchguiden.getElementById("lunch_days").getElementsByTag("a")) {
 			final Day day = new Day();
 
-			day.setName(dayElement.ownText​());
+			day.setName(dayElement.ownText());
 
 			day.setDate(dayElement.attr("href").replace("https://www.aland.com/lunch/", ""));
 
