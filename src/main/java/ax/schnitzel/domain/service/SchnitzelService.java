@@ -34,7 +34,7 @@ public class SchnitzelService {
 
 	/** Scheduled method for updating the local cache of day menus. */
 	@PostConstruct
-	@Scheduled(cron = "0 0 0,9,10,11,12,13 * * MON-FRI")
+	@Scheduled(cron = "0 0 0,9,10,11,12,13 * * *")
 	public void updateContent() {
 		try {
 			List<DayMenu> newlist = lunchguiden.getDayMenus();
