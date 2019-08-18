@@ -11,7 +11,6 @@ import org.jsoup.nodes.Document;
 import org.junit.Test;
 
 import ax.schnitzel.domain.model.Restaurant;
-import ax.schnitzel.domain.model.Day;
 
 public class LunchguidenRepositoryTest extends LunchguidenRepository {
 
@@ -23,8 +22,7 @@ public class LunchguidenRepositoryTest extends LunchguidenRepository {
 	public void test_20171019() throws IOException {
 
 		Document doc = Jsoup.parse(this.getClass().getClassLoader().getResourceAsStream("ax/schnitzel/lunchguiden_2017-10-19.html"), "UTF-8", url);
-		List<Restaurant> restaurants = lunchguidenRepository.parseRestaurants(doc);
-		List<Day> days = lunchguidenRepository.parseDays(doc);
+		List<Restaurant> restaurants = lunchguidenRepository.parse(doc);
 		assertTrue(restaurants.size() == 2);
 
 		// Validate Bistro Savoy
@@ -38,16 +36,13 @@ public class LunchguidenRepositoryTest extends LunchguidenRepository {
 		assertTrue(StringUtils.equals(restaurants.get(1).getName(), "Restaurang Sittkoffska Gården"));
 		assertTrue(restaurants.get(1).getDishes().size() == 1);
 		assertTrue(StringUtils.equals(restaurants.get(1).getDishes().get(0), "Schnitzel med vitlökssmör, citron och röstipotatis (H)"));
-
-		// Validate number of days
-		assertTrue(days.size() == 5);
 	}
 	
 	@Test
 	public void test_20171023() throws IOException {
 
 		Document doc = Jsoup.parse(this.getClass().getClassLoader().getResourceAsStream("ax/schnitzel/lunchguiden_2017-10-23.html"), "UTF-8", url);
-		List<Restaurant> restaurants = lunchguidenRepository.parseRestaurants(doc);
+		List<Restaurant> restaurants = lunchguidenRepository.parse(doc);
 		assertTrue(restaurants.isEmpty());
 	}
 }

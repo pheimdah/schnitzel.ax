@@ -13,8 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import ax.schnitzel.domain.model.Restaurant;
 import ax.schnitzel.infrastructure.LunchguidenRepository;
-import ax.schnitzel.domain.model.DayMenu;
 
 @Service
 public class SchnitzelService {
@@ -27,20 +27,20 @@ public class SchnitzelService {
 	private LunchguidenRepository lunchguiden;
 
 	/** Local cache of {@link LunchguidenRepository} results */
-	private final List<DayMenu> cachedDayMenus = new ArrayList<DayMenu>();
+	private List<Restaurant> cachedRestaurants = new ArrayList<Restaurant>(0);
 
 	/** Date when the local cache of restaurants was last successfully updated */
 	private Date lastUpdate;
 
-	/** Scheduled method for updating the local cache of day menus. */
+	/** Scheduled method for updating the local cache of restaurants. */
 	@PostConstruct
-	@Scheduled(cron = "0 0 0,9,10,11,12,13 * * *")
-	public void updateContent() {
+	@Scheduled(cron = "0 0 0,5,6,7,8,9,10 * * MON-FRI")
+	public void updateRestaurants() {
 		try {
-			List<DayMenu> newlist = lunchguiden.getDayMenus();
-			synchronized (cachedDayMenus) {
-				cachedDayMenus.clear();
-				cachedDayMenus.addAll(newlist);
+			List<Restaurant> newlist = lunchguiden.getRestaurants();
+			synchronized (cachedRestaurants) {
+				cachedRestaurants.clear();
+				cachedRestaurants.addAll(newlist);
 				this.lastUpdate = new Date();
 			}
 		}
@@ -49,10 +49,10 @@ public class SchnitzelService {
 		}
 	}
 
-	/** @return immutable list of {@link cachedDayMenus} */
-	public List<DayMenu> getDayMenus() {
-		synchronized (cachedDayMenus) {
-			return Collections.unmodifiableList(cachedDayMenus);
+	/** @return immutable list of {@link cachedRestaurants} */
+	public List<Restaurant> getRestaurants() {
+		synchronized (cachedRestaurants) {
+			return Collections.unmodifiableList(cachedRestaurants);
 		}
 	}
 
