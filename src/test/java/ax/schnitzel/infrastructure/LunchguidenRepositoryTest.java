@@ -18,7 +18,7 @@ public class LunchguidenRepositoryTest extends LunchguidenRepository {
 
 	private String url = "http://www.aland.com/se/mat_och_nojen/lunchguiden";
 
-	@Test
+	@Deprecated
 	public void test_20171019() throws IOException {
 
 		Document doc = Jsoup.parse(this.getClass().getClassLoader().getResourceAsStream("ax/schnitzel/lunchguiden_2017-10-19.html"), "UTF-8", url);
@@ -38,11 +38,27 @@ public class LunchguidenRepositoryTest extends LunchguidenRepository {
 		assertTrue(StringUtils.equals(restaurants.get(1).getDishes().get(0), "Schnitzel med vitlökssmör, citron och röstipotatis (H)"));
 	}
 	
-	@Test
+	@Deprecated
 	public void test_20171023() throws IOException {
 
 		Document doc = Jsoup.parse(this.getClass().getClassLoader().getResourceAsStream("ax/schnitzel/lunchguiden_2017-10-23.html"), "UTF-8", url);
 		List<Restaurant> restaurants = lunchguidenRepository.parse(doc);
 		assertTrue(restaurants.isEmpty());
+	}
+	
+	@Test
+	public void test_20200609() throws IOException {
+
+		Document doc = Jsoup.parse(this.getClass().getClassLoader().getResourceAsStream("ax/schnitzel/lunchguiden_2020-06-09.html"), "UTF-8", url);
+		List<Restaurant> restaurants = lunchguidenRepository.parse(doc);
+		assertTrue(restaurants.size() == 4);
+
+		// Validate Nautical
+		assertTrue(StringUtils.equals(restaurants.get(2).getId(), "restaurant-6"));
+		assertTrue(StringUtils.equals(restaurants.get(2).getName(), "Restaurang Nautical"));
+		assertTrue(restaurants.get(2).getDishes().size() == 1);
+		assertTrue(StringUtils.equals(restaurants.get(2).getDishes().get(0), "Fläskschnitzel med kryddsmör och stekt potatis Varmrätt /Laktosfri /Finländska huvudråvaror"));
+
+
 	}
 }

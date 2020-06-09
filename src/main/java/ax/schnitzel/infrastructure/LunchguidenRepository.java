@@ -8,6 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -49,27 +50,35 @@ public class LunchguidenRepository {
 		List<Restaurant> restaurants = new ArrayList<Restaurant>(0);
 
 		// TODO: Convert to Java 8 Lambdas?
-		for (Element restaurantElement : lunchguiden.getElementById("restaurants").getElementsByClass("restaurant")) {
-			Element menuElement = restaurantElement.getElementsByClass("restaurant_menu").get(0);
+		for (Element restaurantElement : lunchguiden.getElementsByClass("restaurant")) {
 
-			if (StringUtils.containsIgnoreCase(menuElement.toString(), "schnitzel")) {
+			if (StringUtils.containsIgnoreCase(restaurantElement.toString(), "schnitzel")) {
 
 				final Restaurant restaurant = new Restaurant();
 				restaurant.setId(restaurantElement.id());
-				restaurant.setName(restaurantElement.getElementsByClass("header_left").get(0).text());
+				restaurant.setName(restaurantElement.getElementsByClass("restaurant-name").get(0).text());
 
 				LOG.info("Setting up {}", restaurant.getName());
 
 				List<String> dishes = new ArrayList<String>(0);
 
-				for (Element menuItem : menuElement.getElementsByTag("li")) {
+				for (Element dish : restaurantElement.getElementsByClass("dish-title")) {
 
-					// TODO: Use fuzzy searching in case "schnitzel" is misspelled in the menu?
-					// See https://en.wikipedia.org/wiki/Approximate_string_matching
+					String title = dish.getElementsByClass("title").get(0).text();
 
-					if (StringUtils.containsIgnoreCase(menuItem.toString(), "schnitzel")) {
-						dishes.add(menuItem.text());
-						LOG.info("Adding \"{}\" to {}", menuItem.text(), restaurant.getName());
+					Elements text = dish.getElementsByClass("text");
+					if (text != null) {
+						title += " " + text.text();
+					}
+
+					Elements attributes = dish.getElementsByClass("attributes");
+					if (attributes != null) {
+						title += " " + attributes.text();
+					}
+
+					if (StringUtils.containsIgnoreCase(title, "schnitzel")) {
+						dishes.add(title);
+						LOG.info("Adding \"{}\" to {}", title, restaurant.getName());
 					}
 				}
 
