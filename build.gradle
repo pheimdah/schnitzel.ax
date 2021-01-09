@@ -16,7 +16,6 @@ repositories {
     mavenCentral()
 }
 
-// The version below dictates which spring-boot-starter version to use in dependencies section
 buildscript {
 	repositories {
 		mavenCentral()
@@ -27,10 +26,7 @@ buildscript {
 }
 
 dependencies {
-	// Spring boot
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf:2.3.7.RELEASE")
-	compile("org.springframework.boot:spring-boot-starter-undertow:2.3.7.RELEASE")
-	compile("org.springframework.boot:spring-boot-starter-web:2.3.7.RELEASE")
 	testCompile("org.springframework.boot:spring-boot-starter-test:2.3.7.RELEASE")
 
 	compile("org.apache.commons:commons-lang3:3.11")
@@ -38,16 +34,4 @@ dependencies {
 
 	compileOnly('org.projectlombok:lombok:1.18.16')
 	annotationProcessor('org.projectlombok:lombok:1.18.16')
-}
-
-test {
-    systemProperties 'property': 'value'
-}
-
-uploadArchives {
-    repositories {
-       flatDir {
-           dirs 'repos'
-       }
-    }
 }
