@@ -24,12 +24,6 @@ jobs:
       - name: Build and run app
         run: ./gradlew bootRun
 
-      - name: Archive generated HTML
-        uses: actions/upload-artifact@v2
-        with:
-          name: today
-          path: today.html
-
       - name: Deploy to GH pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
