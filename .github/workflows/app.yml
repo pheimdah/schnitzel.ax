@@ -1,0 +1,33 @@
+name: Schnitzel.ax
+
+on:
+  push:
+  schedule:
+  - cron: '0 0,7 * * MON-FRI'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Build and run app
+        run: ./gradlew bootRun
+
+      - name: Deploy to GH pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: output
+          CLEAN: false
