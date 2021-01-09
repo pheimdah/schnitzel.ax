@@ -3,7 +3,7 @@ name: Schnitzel.ax
 on:
   push:
   schedule:
-  - cron: '0 0 0,7 * * MON-FRI'
+  - cron: '0 0,7 * * MON-FRI'
 
 jobs:
   build:
