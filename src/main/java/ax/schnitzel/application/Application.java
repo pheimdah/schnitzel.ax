@@ -2,6 +2,8 @@ package ax.schnitzel.application;
 
 import java.io.FileWriter;
 import java.io.Writer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -46,8 +48,11 @@ public class Application implements CommandLineRunner {
 		Context context = new Context();
 		context.setVariable("restaurants", schnitzelService.getRestaurants());
 
+		// Create 'output' dir
+		Files.createDirectories(Paths.get("output"));
+
 		// Generate today.html
-		Writer writer = new FileWriter("today.html");
+		Writer writer = new FileWriter("output/index.html");
 		writer.write(templateEngine.process("src/main/resources/templates/home.html", context));
 		writer.close();
 
