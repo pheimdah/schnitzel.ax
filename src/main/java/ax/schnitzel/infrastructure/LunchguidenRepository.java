@@ -3,11 +3,11 @@ package ax.schnitzel.infrastructure;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,47 +47,41 @@ public class LunchguidenRepository {
 	 */
 	List<Restaurant> parse(Document lunchguiden) {
 
-		List<Restaurant> restaurants = new ArrayList<Restaurant>(0);
+		return lunchguiden.getElementsByClass("restaurant").stream()
+				.filter(element -> StringUtils.containsIgnoreCase(element.toString(), "schnitzel"))
+				.map(restaurantElement -> {
 
-		// TODO: Convert to Java 8 Lambdas?
-		for (Element restaurantElement : lunchguiden.getElementsByClass("restaurant")) {
+					final Restaurant restaurant = new Restaurant();
+					restaurant.setId(restaurantElement.id());
+					restaurant.setName(restaurantElement.getElementsByClass("restaurant-name").get(0).text());
 
-			if (StringUtils.containsIgnoreCase(restaurantElement.toString(), "schnitzel")) {
+					LOG.info("Setting up {}", restaurant.getName());
 
-				final Restaurant restaurant = new Restaurant();
-				restaurant.setId(restaurantElement.id());
-				restaurant.setName(restaurantElement.getElementsByClass("restaurant-name").get(0).text());
+					List<String> dishes = new ArrayList<>(0);
 
-				LOG.info("Setting up {}", restaurant.getName());
+					restaurantElement.getElementsByClass("dish-title").forEach(dish -> {
+						String title = dish.getElementsByClass("title").get(0).text();
 
-				List<String> dishes = new ArrayList<String>(0);
+						Elements text = dish.getElementsByClass("text");
+						if (text != null) {
+							title += " " + text.text();
+						}
 
-				for (Element dish : restaurantElement.getElementsByClass("dish-title")) {
+						Elements attributes = dish.getElementsByClass("attributes");
+						if (attributes != null) {
+							title += " " + attributes.text();
+						}
 
-					String title = dish.getElementsByClass("title").get(0).text();
+						if (StringUtils.containsIgnoreCase(title, "schnitzel")) {
+							dishes.add(title);
+							LOG.info("Adding \"{}\" to {}", title, restaurant.getName());
+						}
+					});
 
-					Elements text = dish.getElementsByClass("text");
-					if (text != null) {
-						title += " " + text.text();
-					}
-
-					Elements attributes = dish.getElementsByClass("attributes");
-					if (attributes != null) {
-						title += " " + attributes.text();
-					}
-
-					if (StringUtils.containsIgnoreCase(title, "schnitzel")) {
-						dishes.add(title);
-						LOG.info("Adding \"{}\" to {}", title, restaurant.getName());
-					}
-				}
-
-				restaurant.setDishes(dishes);
-				restaurants.add(restaurant);
-
-			}
-		}
-		return restaurants;
+					restaurant.setDishes(dishes);
+					return restaurant;
+				})
+				.collect(Collectors.toList());
 	}
 
 }
