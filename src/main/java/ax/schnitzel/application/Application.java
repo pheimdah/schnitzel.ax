@@ -48,10 +48,8 @@ public class Application implements CommandLineRunner {
 		Context context = new Context();
 		context.setVariable("restaurants", schnitzelService.getRestaurants());
 
-		// Create 'output' dir
+		// Generate today's index.html from the home.html template
 		Files.createDirectories(Paths.get("output"));
-
-		// Generate today.html
 		Writer writer = new FileWriter("output/index.html");
 		writer.write(templateEngine.process("src/main/resources/templates/home.html", context));
 		writer.close();
