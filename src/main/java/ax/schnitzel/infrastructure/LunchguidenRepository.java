@@ -1,7 +1,9 @@
 package ax.schnitzel.infrastructure;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,9 +37,10 @@ public class LunchguidenRepository {
 	 * @throws IOException
 	 */
 	public List<Restaurant> getRestaurants() throws IOException {
-
-		Document lunchguiden = Jsoup.connect(url).timeout(timeout).userAgent(userAgent).get();
-		LOG.info("Requesting today's lunch menu from " + url);
+		final String today = new SimpleDateFormat("yyyyMMdd/w").format(new Date());
+		final String urlToday = url + today;
+		Document lunchguiden = Jsoup.connect(urlToday).timeout(timeout).userAgent(userAgent).get();
+		LOG.info("Requesting today's lunch menu from " + urlToday);
 		return parse(lunchguiden);
 	}
 
