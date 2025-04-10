@@ -4,6 +4,7 @@
 /bin/
 /build/
 /logs/
+output/
 .project
 .classpath
 
