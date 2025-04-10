@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'corretto'
-          java-version: '24'
+          java-version: '23'
 
       - name: Build and run app
         run: ./gradlew bootRun
